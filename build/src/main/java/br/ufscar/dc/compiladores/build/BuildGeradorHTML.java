@@ -64,16 +64,16 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         saida.append("</section>\n");
         saida.append("</header>\n");
         
-        //Seção de ingredientes:
-        saida.append("<section id=\"ingredientes\" >\n");
-        saida.append("<h2>Ingredientes:</h2>\n");
-        visitIngredientes(ctx.ingredientes());
+        //Seção de componentes:
+        saida.append("<section id=\"componentes\" >\n");
+        saida.append("<h2>Componentes:</h2>\n");
+        visitComponentes(ctx.componentes());
         saida.append("</section>\n");
         
         //Seção de preparo:
         saida.append("<section id=\"preparo\" >\n");
         saida.append("<h2>Modo de Preparo:</h2>\n");
-        visitMetodo(ctx.metodo());
+        visitPasso(ctx.passo());
         saida.append("</section>\n");
         
         //Termina a página:
@@ -82,10 +82,10 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         return null;
     }
 
-    //Visitante para os Ingredientes:
+    //Visitante para os Componentes:
     @Override
-    public Void visitIngredientes(BUILDParser.IngredientesContext ctx) {
-        ctx.lista_ingredientes().forEach(ing -> visitLista_ingredientes(ing));
+    public Void visitComponentes(BUILDParser.ComponentesContext ctx) {
+        ctx.lista_componentes().forEach(ing -> visitLista_componentes(ing));
         if (ctx.lista_tempero() != null) {
             ctx.lista_tempero().forEach(temp -> visitLista_tempero(temp));
         }
@@ -93,10 +93,10 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx) {
-        if (ctx.INGREDIENTE() != null) {
-            String nomeIng = ctx.INGREDIENTE().getText();
-            tabela.adicionar(nomeIng, TipoBUILD.INGREDIENTE);
+    public Void visitLista_componentes(BUILDParser.Lista_componentesContext ctx) {
+        if (ctx.COMPONENTE() != null) {
+            String nomeIng = ctx.COMPONENTE().getText();
+            tabela.adicionar(nomeIng, TipoBUILD.COMPONENTE);
             saida.append("<li>");
             if (ctx.medida_liq() != null) {
                 saida.append(ctx.medida_liq().getText() + " de ");
@@ -107,7 +107,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
                     saida.append(ctx.medida_solido().getText() + " de ");
                 }
             }
-            saida.append(ctx.INGREDIENTE().getText() + "</li>\n");
+            saida.append(ctx.COMPONENTE().getText() + "</li>\n");
         }
         return null;
     }
@@ -139,7 +139,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitMetodo(BUILDParser.MetodoContext ctx) {
+    public Void visitPasso(BUILDParser.PassoContext ctx) {
         ctx.cmd().forEach(cmd -> visitCmd(cmd));
         return null;
     }
@@ -147,7 +147,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdAsse(BUILDParser.CmdAsseContext ctx) {
         saida.append("<li>");
-        saida.append("Asse o ingrediente " + ctx.INGREDIENTE().getText() + " por " + ctx.tempo().getText() + " a " + ctx.NUMERO().getText() + " graus Celsius.");
+        saida.append("Asse o componente " + ctx.COMPONENTE().getText() + " por " + ctx.tempo().getText() + " a " + ctx.NUMERO().getText() + " graus Celsius.");
         saida.append("</li>\n");
         return null;
     }
@@ -155,7 +155,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdCozinhe(BUILDParser.CmdCozinheContext ctx) {
         saida.append("<li>");
-        saida.append("Cozinhe " + ctx.INGREDIENTE().getText() + " por " + ctx.tempo().getText());
+        saida.append("Cozinhe " + ctx.COMPONENTE().getText() + " por " + ctx.tempo().getText());
         saida.append("</li>\n");
         return null;
     }
@@ -163,10 +163,10 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdMisture(BUILDParser.CmdMistureContext ctx) {
         saida.append("<li>");
-        saida.append("Misture " + ctx.INGREDIENTE(0) + " com ");
-        for (int i = 1; i < ctx.INGREDIENTE().size(); i++) {
-            saida.append(ctx.INGREDIENTE(i));
-            if (i != ctx.INGREDIENTE().size() - 1) {
+        saida.append("Misture " + ctx.COMPONENTE(0) + " com ");
+        for (int i = 1; i < ctx.COMPONENTE().size(); i++) {
+            saida.append(ctx.COMPONENTE(i));
+            if (i != ctx.COMPONENTE().size() - 1) {
                 saida.append(" e ");
             }
         }
@@ -177,7 +177,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdCorte(BUILDParser.CmdCorteContext ctx) {
         saida.append("<li>");
-        saida.append(ctx.tipo_corte().getText() + " o ingrediente " + ctx.INGREDIENTE().getText());
+        saida.append(ctx.tipo_corte().getText() + " o componente " + ctx.COMPONENTE().getText());
         saida.append("</li>\n");
         return null;
     }
@@ -185,10 +185,10 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdBata(BUILDParser.CmdBataContext ctx) {
         saida.append("<li>");
-        saida.append("Bata " + ctx.INGREDIENTE(0) + " com ");
-        for (int i = 1; i < ctx.INGREDIENTE().size(); i++) {
-            saida.append(ctx.INGREDIENTE(i));
-            if (i != ctx.INGREDIENTE().size() - 1) {
+        saida.append("Bata " + ctx.COMPONENTE(0) + " com ");
+        for (int i = 1; i < ctx.COMPONENTE().size(); i++) {
+            saida.append(ctx.COMPONENTE(i));
+            if (i != ctx.COMPONENTE().size() - 1) {
                 saida.append(" e ");
             }
         }
@@ -205,9 +205,9 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         return null;
     }
 
-    //Visitante do comando Passo:
+    //Visitante do comando Etapa:
     @Override
-    public Void visitCmdPasso(BUILDParser.CmdPassoContext ctx) {
+    public Void visitCmdEtapa(BUILDParser.CmdEtapaContext ctx) {
         String texto = ctx.CADEIA().getText();
         texto = texto.substring(1, texto.length() - 1);
         saida.append("<li>");
@@ -260,7 +260,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         saida.append("<li>Adicione o sal e os temperos</li>\n");
         saida.append("<li>Adicione o vinho. Misture até secar</li>\n");
         saida.append("<li>Adicione 2 conchas do caldo. Misture até secar.</li>\n");
-        saida.append("<li>Repita o último passo até o arroz ficar al dente.</li>\n");
+        saida.append("<li>Repita o último etapa até o arroz ficar al dente.</li>\n");
         saida.append("<li>Adicione a manteiga e deixe derreter</li>\n");
         saida.append("<li>Misture o parmesão</li>\n");
         return null;

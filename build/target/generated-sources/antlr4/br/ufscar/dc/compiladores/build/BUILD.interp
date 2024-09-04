@@ -10,8 +10,8 @@ null
 'min'
 'seg'
 'Paragrafo'
-'Ingredientes'
-'fim_ingredientes'
+'Componentes'
+'fim_componentes'
 'de'
 'g'
 'colher'
@@ -24,8 +24,8 @@ null
 'cha'
 'sobremesa'
 'sopa'
-'Metodo'
-'fim_metodo'
+'Passo'
+'fim_passo'
 'asse'
 '('
 ','
@@ -35,7 +35,7 @@ null
 'corte'
 'bata'
 'descanse'
-'passo'
+'etapa'
 'Pao_de_Lo'
 'cobertura'
 'arroz'
@@ -96,7 +96,7 @@ null
 null
 null
 NUMERO
-INGREDIENTE
+COMPONENTE
 TEMPERO
 CADEIA
 COMENTARIO
@@ -109,13 +109,13 @@ nome
 tempo_mont
 unidade_tempo
 paragrafo
-ingredientes
-lista_ingredientes
+componentes
+lista_componentes
 medida_solido
 medida_liq
 lista_tempero
 tipo_colher
-metodo
+passo
 cmd
 cmdAsse
 cmdCozinhe
@@ -123,7 +123,7 @@ cmdMisture
 cmdCorte
 cmdBata
 cmdDescanse
-cmdPasso
+cmdEtapa
 cmdPao_de_Lo
 cmdCobertura
 cmdArroz

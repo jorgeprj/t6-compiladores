@@ -88,25 +88,25 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIngredientes(BUILDParser.IngredientesContext ctx) { }
+	@Override public void enterComponentes(BUILDParser.ComponentesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIngredientes(BUILDParser.IngredientesContext ctx) { }
+	@Override public void exitComponentes(BUILDParser.ComponentesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx) { }
+	@Override public void enterLista_componentes(BUILDParser.Lista_componentesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx) { }
+	@Override public void exitLista_componentes(BUILDParser.Lista_componentesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -160,13 +160,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMetodo(BUILDParser.MetodoContext ctx) { }
+	@Override public void enterPasso(BUILDParser.PassoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMetodo(BUILDParser.MetodoContext ctx) { }
+	@Override public void exitPasso(BUILDParser.PassoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -256,13 +256,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdPasso(BUILDParser.CmdPassoContext ctx) { }
+	@Override public void enterCmdEtapa(BUILDParser.CmdEtapaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdPasso(BUILDParser.CmdPassoContext ctx) { }
+	@Override public void exitCmdEtapa(BUILDParser.CmdEtapaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

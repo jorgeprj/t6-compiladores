@@ -22,23 +22,23 @@ public class BUILDParser extends Parser {
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
 		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
 		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
-		T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, NUMERO=44, INGREDIENTE=45, 
+		T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, NUMERO=44, COMPONENTE=45, 
 		TEMPERO=46, CADEIA=47, COMENTARIO=48, WS=49;
 	public static final int
 		RULE_montagem = 0, RULE_imagem = 1, RULE_nome = 2, RULE_tempo_mont = 3, 
-		RULE_unidade_tempo = 4, RULE_paragrafo = 5, RULE_ingredientes = 6, RULE_lista_ingredientes = 7, 
+		RULE_unidade_tempo = 4, RULE_paragrafo = 5, RULE_componentes = 6, RULE_lista_componentes = 7, 
 		RULE_medida_solido = 8, RULE_medida_liq = 9, RULE_lista_tempero = 10, 
-		RULE_tipo_colher = 11, RULE_metodo = 12, RULE_cmd = 13, RULE_cmdAsse = 14, 
+		RULE_tipo_colher = 11, RULE_passo = 12, RULE_cmd = 13, RULE_cmdAsse = 14, 
 		RULE_cmdCozinhe = 15, RULE_cmdMisture = 16, RULE_cmdCorte = 17, RULE_cmdBata = 18, 
-		RULE_cmdDescanse = 19, RULE_cmdPasso = 20, RULE_cmdPao_de_Lo = 21, RULE_cmdCobertura = 22, 
+		RULE_cmdDescanse = 19, RULE_cmdEtapa = 20, RULE_cmdPao_de_Lo = 21, RULE_cmdCobertura = 22, 
 		RULE_cmdArroz = 23, RULE_cmdBaseRisotto = 24, RULE_tipo_corte = 25, RULE_tempo = 26;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"montagem", "imagem", "nome", "tempo_mont", "unidade_tempo", "paragrafo", 
-			"ingredientes", "lista_ingredientes", "medida_solido", "medida_liq", 
-			"lista_tempero", "tipo_colher", "metodo", "cmd", "cmdAsse", "cmdCozinhe", 
-			"cmdMisture", "cmdCorte", "cmdBata", "cmdDescanse", "cmdPasso", "cmdPao_de_Lo", 
-			"cmdCobertura", "cmdArroz", "cmdBaseRisotto", "tipo_corte", "tempo"
+			"componentes", "lista_componentes", "medida_solido", "medida_liq", "lista_tempero", 
+			"tipo_colher", "passo", "cmd", "cmdAsse", "cmdCozinhe", "cmdMisture", 
+			"cmdCorte", "cmdBata", "cmdDescanse", "cmdEtapa", "cmdPao_de_Lo", "cmdCobertura", 
+			"cmdArroz", "cmdBaseRisotto", "tipo_corte", "tempo"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -46,11 +46,11 @@ public class BUILDParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'montagem'", "'fim_montagem'", "'Imagem'", "':'", "'Nome'", "'Tempo'", 
-			"'hora'", "'min'", "'seg'", "'Paragrafo'", "'Ingredientes'", "'fim_ingredientes'", 
+			"'hora'", "'min'", "'seg'", "'Paragrafo'", "'Componentes'", "'fim_componentes'", 
 			"'de'", "'g'", "'colher'", "'xicara'", "'ml'", "'l'", "'copo'", "'pitada'", 
-			"'a_gosto'", "'cha'", "'sobremesa'", "'sopa'", "'Metodo'", "'fim_metodo'", 
+			"'a_gosto'", "'cha'", "'sobremesa'", "'sopa'", "'Passo'", "'fim_passo'", 
 			"'asse'", "'('", "','", "')'", "'cozinhe'", "'misture'", "'corte'", "'bata'", 
-			"'descanse'", "'passo'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", "'risotto'", 
+			"'descanse'", "'etapa'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", "'risotto'", 
 			"'picar'", "'ralar'", "'cortar'"
 		};
 	}
@@ -60,7 +60,7 @@ public class BUILDParser extends Parser {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, null, null, null, "NUMERO", "INGREDIENTE", 
+			null, null, null, null, null, null, null, null, "NUMERO", "COMPONENTE", 
 			"TEMPERO", "CADEIA", "COMENTARIO", "WS"
 		};
 	}
@@ -122,11 +122,11 @@ public class BUILDParser extends Parser {
 		public Tempo_montContext tempo_mont() {
 			return getRuleContext(Tempo_montContext.class,0);
 		}
-		public IngredientesContext ingredientes() {
-			return getRuleContext(IngredientesContext.class,0);
+		public ComponentesContext componentes() {
+			return getRuleContext(ComponentesContext.class,0);
 		}
-		public MetodoContext metodo() {
-			return getRuleContext(MetodoContext.class,0);
+		public PassoContext passo() {
+			return getRuleContext(PassoContext.class,0);
 		}
 		public TerminalNode EOF() { return getToken(BUILDParser.EOF, 0); }
 		public ImagemContext imagem() {
@@ -195,9 +195,9 @@ public class BUILDParser extends Parser {
 				_la = _input.LA(1);
 			}
 			setState(66);
-			ingredientes();
+			componentes();
 			setState(67);
-			metodo();
+			passo();
 			setState(68);
 			match(T__1);
 			setState(69);
@@ -467,12 +467,12 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class IngredientesContext extends ParserRuleContext {
-		public List<Lista_ingredientesContext> lista_ingredientes() {
-			return getRuleContexts(Lista_ingredientesContext.class);
+	public static class ComponentesContext extends ParserRuleContext {
+		public List<Lista_componentesContext> lista_componentes() {
+			return getRuleContexts(Lista_componentesContext.class);
 		}
-		public Lista_ingredientesContext lista_ingredientes(int i) {
-			return getRuleContext(Lista_ingredientesContext.class,i);
+		public Lista_componentesContext lista_componentes(int i) {
+			return getRuleContext(Lista_componentesContext.class,i);
 		}
 		public List<Lista_temperoContext> lista_tempero() {
 			return getRuleContexts(Lista_temperoContext.class);
@@ -480,28 +480,28 @@ public class BUILDParser extends Parser {
 		public Lista_temperoContext lista_tempero(int i) {
 			return getRuleContext(Lista_temperoContext.class,i);
 		}
-		public IngredientesContext(ParserRuleContext parent, int invokingState) {
+		public ComponentesContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ingredientes; }
+		@Override public int getRuleIndex() { return RULE_componentes; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterIngredientes(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterComponentes(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitIngredientes(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitComponentes(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitIngredientes(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitComponentes(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final IngredientesContext ingredientes() throws RecognitionException {
-		IngredientesContext _localctx = new IngredientesContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_ingredientes);
+	public final ComponentesContext componentes() throws RecognitionException {
+		ComponentesContext _localctx = new ComponentesContext(_ctx, getState());
+		enterRule(_localctx, 12, RULE_componentes);
 		int _la;
 		try {
 			int _alt;
@@ -520,7 +520,7 @@ public class BUILDParser extends Parser {
 					{
 					{
 					setState(94);
-					lista_ingredientes();
+					lista_componentes();
 					}
 					}
 					break;
@@ -560,36 +560,36 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Lista_ingredientesContext extends ParserRuleContext {
-		public TerminalNode INGREDIENTE() { return getToken(BUILDParser.INGREDIENTE, 0); }
+	public static class Lista_componentesContext extends ParserRuleContext {
+		public TerminalNode COMPONENTE() { return getToken(BUILDParser.COMPONENTE, 0); }
 		public Medida_solidoContext medida_solido() {
 			return getRuleContext(Medida_solidoContext.class,0);
 		}
 		public Medida_liqContext medida_liq() {
 			return getRuleContext(Medida_liqContext.class,0);
 		}
-		public Lista_ingredientesContext(ParserRuleContext parent, int invokingState) {
+		public Lista_componentesContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_lista_ingredientes; }
+		@Override public int getRuleIndex() { return RULE_lista_componentes; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterLista_ingredientes(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterLista_componentes(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitLista_ingredientes(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitLista_componentes(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitLista_ingredientes(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitLista_componentes(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final Lista_ingredientesContext lista_ingredientes() throws RecognitionException {
-		Lista_ingredientesContext _localctx = new Lista_ingredientesContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_lista_ingredientes);
+	public final Lista_componentesContext lista_componentes() throws RecognitionException {
+		Lista_componentesContext _localctx = new Lista_componentesContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_lista_componentes);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -612,7 +612,7 @@ public class BUILDParser extends Parser {
 			setState(111);
 			match(T__12);
 			setState(112);
-			match(INGREDIENTE);
+			match(COMPONENTE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -905,35 +905,35 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class MetodoContext extends ParserRuleContext {
+	public static class PassoContext extends ParserRuleContext {
 		public List<CmdContext> cmd() {
 			return getRuleContexts(CmdContext.class);
 		}
 		public CmdContext cmd(int i) {
 			return getRuleContext(CmdContext.class,i);
 		}
-		public MetodoContext(ParserRuleContext parent, int invokingState) {
+		public PassoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_metodo; }
+		@Override public int getRuleIndex() { return RULE_passo; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterMetodo(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterPasso(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitMetodo(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitPasso(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitMetodo(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitPasso(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final MetodoContext metodo() throws RecognitionException {
-		MetodoContext _localctx = new MetodoContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_metodo);
+	public final PassoContext passo() throws RecognitionException {
+		PassoContext _localctx = new PassoContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_passo);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -990,8 +990,8 @@ public class BUILDParser extends Parser {
 		public CmdDescanseContext cmdDescanse() {
 			return getRuleContext(CmdDescanseContext.class,0);
 		}
-		public CmdPassoContext cmdPasso() {
-			return getRuleContext(CmdPassoContext.class,0);
+		public CmdEtapaContext cmdEtapa() {
+			return getRuleContext(CmdEtapaContext.class,0);
 		}
 		public CmdPao_de_LoContext cmdPao_de_Lo() {
 			return getRuleContext(CmdPao_de_LoContext.class,0);
@@ -1077,7 +1077,7 @@ public class BUILDParser extends Parser {
 				enterOuterAlt(_localctx, 7);
 				{
 				setState(157);
-				cmdPasso();
+				cmdEtapa();
 				}
 				break;
 			case T__36:
@@ -1125,7 +1125,7 @@ public class BUILDParser extends Parser {
 
 	public static class CmdAsseContext extends ParserRuleContext {
 		public Token temperatura;
-		public TerminalNode INGREDIENTE() { return getToken(BUILDParser.INGREDIENTE, 0); }
+		public TerminalNode COMPONENTE() { return getToken(BUILDParser.COMPONENTE, 0); }
 		public TempoContext tempo() {
 			return getRuleContext(TempoContext.class,0);
 		}
@@ -1160,7 +1160,7 @@ public class BUILDParser extends Parser {
 			setState(165);
 			match(T__27);
 			setState(166);
-			match(INGREDIENTE);
+			match(COMPONENTE);
 			setState(167);
 			match(T__28);
 			setState(168);
@@ -1185,7 +1185,7 @@ public class BUILDParser extends Parser {
 	}
 
 	public static class CmdCozinheContext extends ParserRuleContext {
-		public TerminalNode INGREDIENTE() { return getToken(BUILDParser.INGREDIENTE, 0); }
+		public TerminalNode COMPONENTE() { return getToken(BUILDParser.COMPONENTE, 0); }
 		public TempoContext tempo() {
 			return getRuleContext(TempoContext.class,0);
 		}
@@ -1219,7 +1219,7 @@ public class BUILDParser extends Parser {
 			setState(174);
 			match(T__27);
 			setState(175);
-			match(INGREDIENTE);
+			match(COMPONENTE);
 			setState(176);
 			match(T__28);
 			setState(177);
@@ -1240,9 +1240,9 @@ public class BUILDParser extends Parser {
 	}
 
 	public static class CmdMistureContext extends ParserRuleContext {
-		public List<TerminalNode> INGREDIENTE() { return getTokens(BUILDParser.INGREDIENTE); }
-		public TerminalNode INGREDIENTE(int i) {
-			return getToken(BUILDParser.INGREDIENTE, i);
+		public List<TerminalNode> COMPONENTE() { return getTokens(BUILDParser.COMPONENTE); }
+		public TerminalNode COMPONENTE(int i) {
+			return getToken(BUILDParser.COMPONENTE, i);
 		}
 		public CmdMistureContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1275,7 +1275,7 @@ public class BUILDParser extends Parser {
 			setState(181);
 			match(T__27);
 			setState(182);
-			match(INGREDIENTE);
+			match(COMPONENTE);
 			setState(185); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -1285,7 +1285,7 @@ public class BUILDParser extends Parser {
 				setState(183);
 				match(T__28);
 				setState(184);
-				match(INGREDIENTE);
+				match(COMPONENTE);
 				}
 				}
 				setState(187); 
@@ -1308,7 +1308,7 @@ public class BUILDParser extends Parser {
 	}
 
 	public static class CmdCorteContext extends ParserRuleContext {
-		public TerminalNode INGREDIENTE() { return getToken(BUILDParser.INGREDIENTE, 0); }
+		public TerminalNode COMPONENTE() { return getToken(BUILDParser.COMPONENTE, 0); }
 		public Tipo_corteContext tipo_corte() {
 			return getRuleContext(Tipo_corteContext.class,0);
 		}
@@ -1342,7 +1342,7 @@ public class BUILDParser extends Parser {
 			setState(192);
 			match(T__27);
 			setState(193);
-			match(INGREDIENTE);
+			match(COMPONENTE);
 			setState(194);
 			match(T__28);
 			setState(195);
@@ -1363,9 +1363,9 @@ public class BUILDParser extends Parser {
 	}
 
 	public static class CmdBataContext extends ParserRuleContext {
-		public List<TerminalNode> INGREDIENTE() { return getTokens(BUILDParser.INGREDIENTE); }
-		public TerminalNode INGREDIENTE(int i) {
-			return getToken(BUILDParser.INGREDIENTE, i);
+		public List<TerminalNode> COMPONENTE() { return getTokens(BUILDParser.COMPONENTE); }
+		public TerminalNode COMPONENTE(int i) {
+			return getToken(BUILDParser.COMPONENTE, i);
 		}
 		public CmdBataContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1398,7 +1398,7 @@ public class BUILDParser extends Parser {
 			setState(199);
 			match(T__27);
 			setState(200);
-			match(INGREDIENTE);
+			match(COMPONENTE);
 			setState(203); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -1408,7 +1408,7 @@ public class BUILDParser extends Parser {
 				setState(201);
 				match(T__28);
 				setState(202);
-				match(INGREDIENTE);
+				match(COMPONENTE);
 				}
 				}
 				setState(205); 
@@ -1480,30 +1480,30 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class CmdPassoContext extends ParserRuleContext {
+	public static class CmdEtapaContext extends ParserRuleContext {
 		public TerminalNode CADEIA() { return getToken(BUILDParser.CADEIA, 0); }
-		public CmdPassoContext(ParserRuleContext parent, int invokingState) {
+		public CmdEtapaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_cmdPasso; }
+		@Override public int getRuleIndex() { return RULE_cmdEtapa; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdPasso(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdEtapa(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdPasso(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdEtapa(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdPasso(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdEtapa(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final CmdPassoContext cmdPasso() throws RecognitionException {
-		CmdPassoContext _localctx = new CmdPassoContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_cmdPasso);
+	public final CmdEtapaContext cmdEtapa() throws RecognitionException {
+		CmdEtapaContext _localctx = new CmdEtapaContext(_ctx, getState());
+		enterRule(_localctx, 40, RULE_cmdEtapa);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{

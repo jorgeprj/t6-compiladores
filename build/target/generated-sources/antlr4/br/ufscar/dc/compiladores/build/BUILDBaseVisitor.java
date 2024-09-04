@@ -59,14 +59,14 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIngredientes(BUILDParser.IngredientesContext ctx) { return visitChildren(ctx); }
+	@Override public T visitComponentes(BUILDParser.ComponentesContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLista_componentes(BUILDParser.Lista_componentesContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -101,7 +101,7 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMetodo(BUILDParser.MetodoContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPasso(BUILDParser.PassoContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -157,7 +157,7 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCmdPasso(BUILDParser.CmdPassoContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCmdEtapa(BUILDParser.CmdEtapaContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

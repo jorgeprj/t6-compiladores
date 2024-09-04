@@ -47,17 +47,17 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitParagrafo(BUILDParser.ParagrafoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#ingredientes}.
+	 * Visit a parse tree produced by {@link BUILDParser#componentes}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIngredientes(BUILDParser.IngredientesContext ctx);
+	T visitComponentes(BUILDParser.ComponentesContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#lista_ingredientes}.
+	 * Visit a parse tree produced by {@link BUILDParser#lista_componentes}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx);
+	T visitLista_componentes(BUILDParser.Lista_componentesContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#medida_solido}.
 	 * @param ctx the parse tree
@@ -83,11 +83,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTipo_colher(BUILDParser.Tipo_colherContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#metodo}.
+	 * Visit a parse tree produced by {@link BUILDParser#passo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMetodo(BUILDParser.MetodoContext ctx);
+	T visitPasso(BUILDParser.PassoContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmd}.
 	 * @param ctx the parse tree
@@ -131,11 +131,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdDescanse(BUILDParser.CmdDescanseContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdPasso}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdEtapa}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdPasso(BUILDParser.CmdPassoContext ctx);
+	T visitCmdEtapa(BUILDParser.CmdEtapaContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmdPao_de_Lo}.
 	 * @param ctx the parse tree

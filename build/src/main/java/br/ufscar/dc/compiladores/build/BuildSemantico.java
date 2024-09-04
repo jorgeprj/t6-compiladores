@@ -14,16 +14,16 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
         return super.visitMontagem(ctx);
     }
 
-    //Visitante da lista de ingredientes: Verifica se o ingrediente já está na tabela e o adiciona:
+    //Visitante da lista de componentes: Verifica se o componente já está na tabela e o adiciona:
     @Override
-    public Void visitLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx) {
-        String nomeIng = ctx.INGREDIENTE().getText();
+    public Void visitLista_componentes(BUILDParser.Lista_componentesContext ctx) {
+        String nomeIng = ctx.COMPONENTE().getText();
         if (tabela.existe(nomeIng)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.INGREDIENTE().getSymbol(), "Ingrediente " + nomeIng + " já adicionado.");
+            SemanticoUtils.adicionarErroSemantico(ctx.COMPONENTE().getSymbol(), "Componente " + nomeIng + " já adicionado.");
         } else {
-            tabela.adicionar(nomeIng, TipoBUILD.INGREDIENTE);
+            tabela.adicionar(nomeIng, TipoBUILD.COMPONENTE);
         }
-        return super.visitLista_ingredientes(ctx);
+        return super.visitLista_componentes(ctx);
     }
 
     //Visitante da lista de temperos: Verifica se o tempero já está na tabela e o adiciona:
@@ -42,9 +42,9 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Asse:
     @Override
     public Void visitCmdAsse(BUILDParser.CmdAsseContext ctx) {
-        String Ing = ctx.INGREDIENTE().getText();
+        String Ing = ctx.COMPONENTE().getText();
         if (!tabela.existe(Ing)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.INGREDIENTE().getSymbol(), "Ingrediente " + Ing + " não declarado.");
+            SemanticoUtils.adicionarErroSemantico(ctx.COMPONENTE().getSymbol(), "Componente " + Ing + " não declarado.");
         }
         return super.visitCmdAsse(ctx);
     }
@@ -52,9 +52,9 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Cozinhe:
     @Override
     public Void visitCmdCozinhe(BUILDParser.CmdCozinheContext ctx) {
-        String Ing = ctx.INGREDIENTE().getText();
+        String Ing = ctx.COMPONENTE().getText();
         if (!tabela.existe(Ing)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.INGREDIENTE().getSymbol(), "Ingrediente " + Ing + " não declarado.");
+            SemanticoUtils.adicionarErroSemantico(ctx.COMPONENTE().getSymbol(), "Componente " + Ing + " não declarado.");
         }
         return super.visitCmdCozinhe(ctx);
     }
@@ -62,9 +62,9 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Corte:
     @Override
     public Void visitCmdCorte(BUILDParser.CmdCorteContext ctx) {
-        String Ing = ctx.INGREDIENTE().getText();
+        String Ing = ctx.COMPONENTE().getText();
         if (!tabela.existe(Ing)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.INGREDIENTE().getSymbol(), "Ingrediente " + Ing + " não declarado.");
+            SemanticoUtils.adicionarErroSemantico(ctx.COMPONENTE().getSymbol(), "Componente " + Ing + " não declarado.");
         }
         return super.visitCmdCorte(ctx);
     }
@@ -72,10 +72,10 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Misture:
     @Override
     public Void visitCmdMisture(BUILDParser.CmdMistureContext ctx) {
-        for (var ing : ctx.INGREDIENTE()) {
+        for (var ing : ctx.COMPONENTE()) {
             String nome_ing = ing.getText();
             if (!tabela.existe(nome_ing)) {
-                SemanticoUtils.adicionarErroSemantico(ing.getSymbol(), "Ingrediente " + nome_ing + " não declarado.");
+                SemanticoUtils.adicionarErroSemantico(ing.getSymbol(), "Componente " + nome_ing + " não declarado.");
             }
         }
         return super.visitCmdMisture(ctx);
@@ -84,10 +84,10 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Bata:
     @Override
     public Void visitCmdBata(BUILDParser.CmdBataContext ctx) {
-        for (var ing : ctx.INGREDIENTE()) {
+        for (var ing : ctx.COMPONENTE()) {
             String nome_ing = ing.getText();
             if (!tabela.existe(nome_ing)) {
-                SemanticoUtils.adicionarErroSemantico(ing.getSymbol(), "Ingrediente " + nome_ing + " não declarado.");
+                SemanticoUtils.adicionarErroSemantico(ing.getSymbol(), "Componente " + nome_ing + " não declarado.");
             }
         }
         return super.visitCmdBata(ctx);

@@ -68,25 +68,25 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitParagrafo(BUILDParser.ParagrafoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#ingredientes}.
+	 * Enter a parse tree produced by {@link BUILDParser#componentes}.
 	 * @param ctx the parse tree
 	 */
-	void enterIngredientes(BUILDParser.IngredientesContext ctx);
+	void enterComponentes(BUILDParser.ComponentesContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#ingredientes}.
+	 * Exit a parse tree produced by {@link BUILDParser#componentes}.
 	 * @param ctx the parse tree
 	 */
-	void exitIngredientes(BUILDParser.IngredientesContext ctx);
+	void exitComponentes(BUILDParser.ComponentesContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#lista_ingredientes}.
+	 * Enter a parse tree produced by {@link BUILDParser#lista_componentes}.
 	 * @param ctx the parse tree
 	 */
-	void enterLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx);
+	void enterLista_componentes(BUILDParser.Lista_componentesContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#lista_ingredientes}.
+	 * Exit a parse tree produced by {@link BUILDParser#lista_componentes}.
 	 * @param ctx the parse tree
 	 */
-	void exitLista_ingredientes(BUILDParser.Lista_ingredientesContext ctx);
+	void exitLista_componentes(BUILDParser.Lista_componentesContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#medida_solido}.
 	 * @param ctx the parse tree
@@ -128,15 +128,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitTipo_colher(BUILDParser.Tipo_colherContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#metodo}.
+	 * Enter a parse tree produced by {@link BUILDParser#passo}.
 	 * @param ctx the parse tree
 	 */
-	void enterMetodo(BUILDParser.MetodoContext ctx);
+	void enterPasso(BUILDParser.PassoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#metodo}.
+	 * Exit a parse tree produced by {@link BUILDParser#passo}.
 	 * @param ctx the parse tree
 	 */
-	void exitMetodo(BUILDParser.MetodoContext ctx);
+	void exitPasso(BUILDParser.PassoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmd}.
 	 * @param ctx the parse tree
@@ -208,15 +208,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdDescanse(BUILDParser.CmdDescanseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdPasso}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdEtapa}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdPasso(BUILDParser.CmdPassoContext ctx);
+	void enterCmdEtapa(BUILDParser.CmdEtapaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdPasso}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdEtapa}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdPasso(BUILDParser.CmdPassoContext ctx);
+	void exitCmdEtapa(BUILDParser.CmdEtapaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmdPao_de_Lo}.
 	 * @param ctx the parse tree
