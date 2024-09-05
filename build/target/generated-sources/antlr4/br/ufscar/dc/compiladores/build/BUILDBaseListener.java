@@ -220,13 +220,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdCorte(BUILDParser.CmdCorteContext ctx) { }
+	@Override public void enterCmdAjuste(BUILDParser.CmdAjusteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdCorte(BUILDParser.CmdCorteContext ctx) { }
+	@Override public void exitCmdAjuste(BUILDParser.CmdAjusteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -316,13 +316,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTipo_corte(BUILDParser.Tipo_corteContext ctx) { }
+	@Override public void enterTipo_ajuste(BUILDParser.Tipo_ajusteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTipo_corte(BUILDParser.Tipo_corteContext ctx) { }
+	@Override public void exitTipo_ajuste(BUILDParser.Tipo_ajusteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

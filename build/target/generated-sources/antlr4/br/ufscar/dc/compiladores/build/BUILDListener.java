@@ -178,15 +178,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdMisture(BUILDParser.CmdMistureContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdCorte}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdAjuste}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdCorte(BUILDParser.CmdCorteContext ctx);
+	void enterCmdAjuste(BUILDParser.CmdAjusteContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdCorte}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdAjuste}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdCorte(BUILDParser.CmdCorteContext ctx);
+	void exitCmdAjuste(BUILDParser.CmdAjusteContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmdBata}.
 	 * @param ctx the parse tree
@@ -258,15 +258,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdCadeira(BUILDParser.CmdCadeiraContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#tipo_corte}.
+	 * Enter a parse tree produced by {@link BUILDParser#tipo_ajuste}.
 	 * @param ctx the parse tree
 	 */
-	void enterTipo_corte(BUILDParser.Tipo_corteContext ctx);
+	void enterTipo_ajuste(BUILDParser.Tipo_ajusteContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#tipo_corte}.
+	 * Exit a parse tree produced by {@link BUILDParser#tipo_ajuste}.
 	 * @param ctx the parse tree
 	 */
-	void exitTipo_corte(BUILDParser.Tipo_corteContext ctx);
+	void exitTipo_ajuste(BUILDParser.Tipo_ajusteContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#tempo}.
 	 * @param ctx the parse tree

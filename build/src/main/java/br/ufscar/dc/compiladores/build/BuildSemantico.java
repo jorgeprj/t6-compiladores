@@ -59,14 +59,14 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
         return super.visitCmdCozinhe(ctx);
     }
 
-    //Visitante do comando Corte:
+    //Visitante do comando Ajuste:
     @Override
-    public Void visitCmdCorte(BUILDParser.CmdCorteContext ctx) {
-        String Ing = ctx.PECA().getText();
-        if (!tabela.existe(Ing)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Componente " + Ing + " não declarado.");
+    public Void visitCmdAjuste(BUILDParser.CmdAjusteContext ctx) {
+        String Pec = ctx.PECA().getText();
+        if (!tabela.existe(Pec)) {
+            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça" + Pec + " não declarado.");
         }
-        return super.visitCmdCorte(ctx);
+        return super.visitCmdAjuste(ctx);
     }
 
     //Visitante do comando Misture:

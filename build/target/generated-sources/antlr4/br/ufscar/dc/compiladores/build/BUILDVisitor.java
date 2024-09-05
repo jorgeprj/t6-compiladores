@@ -113,11 +113,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdMisture(BUILDParser.CmdMistureContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdCorte}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdAjuste}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdCorte(BUILDParser.CmdCorteContext ctx);
+	T visitCmdAjuste(BUILDParser.CmdAjusteContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmdBata}.
 	 * @param ctx the parse tree
@@ -161,11 +161,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdCadeira(BUILDParser.CmdCadeiraContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#tipo_corte}.
+	 * Visit a parse tree produced by {@link BUILDParser#tipo_ajuste}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTipo_corte(BUILDParser.Tipo_corteContext ctx);
+	T visitTipo_ajuste(BUILDParser.Tipo_ajusteContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#tempo}.
 	 * @param ctx the parse tree

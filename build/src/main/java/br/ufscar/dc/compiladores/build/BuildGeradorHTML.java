@@ -175,9 +175,9 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitCmdCorte(BUILDParser.CmdCorteContext ctx) {
+    public Void visitCmdAjuste(BUILDParser.CmdAjusteContext ctx) {
         saida.append("<li>");
-        saida.append(ctx.tipo_corte().getText() + " a peça " + ctx.PECA().getText());
+        saida.append("Ajuste a peça " + ctx.PECA().getText() + " de forma " + ctx.tipo_ajuste().getText());
         saida.append("</li>\n");
         return null;
     }

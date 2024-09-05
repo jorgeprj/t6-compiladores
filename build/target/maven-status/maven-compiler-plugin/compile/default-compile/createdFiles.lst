@@ -8,7 +8,6 @@ br\ufscar\dc\compiladores\build\BUILDParser$CmdTesteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$ComponentesContext.class
 br\ufscar\dc\compiladores\build\BUILDListener.class
 br\ufscar\dc\compiladores\build\BUILDBaseListener.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdCorteContext.class
 br\ufscar\dc\compiladores\build\SemanticoUtils.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tempo_montContext.class
 br\ufscar\dc\compiladores\build\BuildSemantico.class
@@ -22,9 +21,9 @@ br\ufscar\dc\compiladores\build\BUILDParser.class
 br\ufscar\dc\compiladores\build\Principal.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdCozinheContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$PassoContext.class
+br\ufscar\dc\compiladores\build\BUILDParser$Tipo_ajusteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$TempoContext.class
 br\ufscar\dc\compiladores\build\BuildGeradorHTML.class
-br\ufscar\dc\compiladores\build\BUILDParser$Tipo_corteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$MontagemContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Medida_solidoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdCadeiraContext.class
@@ -35,6 +34,7 @@ br\ufscar\dc\compiladores\build\BUILDParser$CmdAparafuseContext.class
 br\ufscar\dc\compiladores\build\BUILDBaseVisitor.class
 br\ufscar\dc\compiladores\build\BUILDLexer.class
 br\ufscar\dc\compiladores\build\TabelaDeSimbolos$EntradaTabelaDeSimbolos.class
+br\ufscar\dc\compiladores\build\BUILDParser$CmdAjusteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$NomeContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Lista_temperoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Unidade_tempoContext.class

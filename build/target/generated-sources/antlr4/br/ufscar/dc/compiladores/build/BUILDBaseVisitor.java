@@ -136,7 +136,7 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCmdCorte(BUILDParser.CmdCorteContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCmdAjuste(BUILDParser.CmdAjusteContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -192,7 +192,7 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTipo_corte(BUILDParser.Tipo_corteContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTipo_ajuste(BUILDParser.Tipo_ajusteContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
