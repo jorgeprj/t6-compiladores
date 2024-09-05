@@ -59,30 +59,6 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitLista_pecas(BUILDParser.Lista_pecasContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#medida_solido}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMedida_solido(BUILDParser.Medida_solidoContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link BUILDParser#medida_liq}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitMedida_liq(BUILDParser.Medida_liqContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link BUILDParser#lista_ferramentas}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link BUILDParser#tipo_colher}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTipo_colher(BUILDParser.Tipo_colherContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link BUILDParser#passo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

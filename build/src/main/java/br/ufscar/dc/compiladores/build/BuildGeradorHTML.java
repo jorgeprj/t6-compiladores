@@ -82,59 +82,14 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         return null;
     }
 
-    //Visitante para os Componentes:
-    @Override
-    public Void visitComponentes(BUILDParser.ComponentesContext ctx) {
-        ctx.lista_pecas().forEach(pec -> visitLista_pecas(pec));
-        if (ctx.lista_ferramentas() != null) {
-            ctx.lista_ferramentas().forEach(fer -> visitLista_ferramentas(fer));
-        }
-        return null;
-    }
 
     @Override
     public Void visitLista_pecas(BUILDParser.Lista_pecasContext ctx) {
         if (ctx.PECA() != null) {
-            String nomeIng = ctx.PECA().getText();
-            tabela.adicionar(nomeIng, TipoBUILD.PECA);
-            saida.append("<li>");
-            if (ctx.medida_liq() != null) {
-                saida.append(ctx.medida_liq().getText() + " de ");
-            } else if (ctx.medida_solido() != null) {
-                if (ctx.medida_solido().tipo_colher() != null) {
-                    saida.append(ctx.medida_solido().NUMERO().getText() + " colheres de " + ctx.medida_solido().tipo_colher().getText() + " de ");
-                } else {
-                    saida.append(ctx.medida_solido().getText() + " de ");
-                }
-            }
-            saida.append(ctx.PECA().getText() + "</li>\n");
+            String nomePec = ctx.PECA().getText();
+            tabela.adicionar(nomePec, TipoBUILD.PECA);
+            saida.append("<li>" + ctx.NUMERO().getText() + " x " + ctx.PECA().getText() + "</li>\n");
         }
-        return null;
-    }
-
-    @Override
-    public Void visitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx) {
-        String nomeFer = ctx.FERRAMENTA().getText();
-        tabela.adicionar(nomeFer, TipoBUILD.FERRAMENTA);
-        saida.append("<li>");
-        if (ctx.NUMERO() != null) {
-            saida.append(ctx.NUMERO().getText());
-            if (ctx.peso != null) {
-                saida.append("g de ");
-            } else if (ctx.tipo_colher() != null) {
-                saida.append(" colheres de " + ctx.tipo_colher().getText() + " de ");
-            } else {
-                saida.append(" xícaras de ");
-            }
-            saida.append(ctx.FERRAMENTA().getText());
-        } else if (ctx.pitada != null) {
-            saida.append("Uma pitada de ");
-            saida.append(ctx.FERRAMENTA().getText());
-        } else if (ctx.a_gosto != null) {
-            saida.append(ctx.FERRAMENTA().getText());
-            saida.append(" a gosto");
-        }
-        saida.append("</li>\n");
         return null;
     }
 

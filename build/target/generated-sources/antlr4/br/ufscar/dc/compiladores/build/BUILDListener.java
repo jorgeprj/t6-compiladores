@@ -88,46 +88,6 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitLista_pecas(BUILDParser.Lista_pecasContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#medida_solido}.
-	 * @param ctx the parse tree
-	 */
-	void enterMedida_solido(BUILDParser.Medida_solidoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link BUILDParser#medida_solido}.
-	 * @param ctx the parse tree
-	 */
-	void exitMedida_solido(BUILDParser.Medida_solidoContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link BUILDParser#medida_liq}.
-	 * @param ctx the parse tree
-	 */
-	void enterMedida_liq(BUILDParser.Medida_liqContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link BUILDParser#medida_liq}.
-	 * @param ctx the parse tree
-	 */
-	void exitMedida_liq(BUILDParser.Medida_liqContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link BUILDParser#lista_ferramentas}.
-	 * @param ctx the parse tree
-	 */
-	void enterLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link BUILDParser#lista_ferramentas}.
-	 * @param ctx the parse tree
-	 */
-	void exitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link BUILDParser#tipo_colher}.
-	 * @param ctx the parse tree
-	 */
-	void enterTipo_colher(BUILDParser.Tipo_colherContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link BUILDParser#tipo_colher}.
-	 * @param ctx the parse tree
-	 */
-	void exitTipo_colher(BUILDParser.Tipo_colherContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link BUILDParser#passo}.
 	 * @param ctx the parse tree
 	 */

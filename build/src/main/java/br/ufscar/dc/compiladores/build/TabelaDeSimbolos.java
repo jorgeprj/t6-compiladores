@@ -7,7 +7,6 @@ public class TabelaDeSimbolos {
     public enum TipoBUILD{
         NUMERO,
         PECA,
-        FERRAMENTA,
         CADEIA,
         INVALIDO
     }
