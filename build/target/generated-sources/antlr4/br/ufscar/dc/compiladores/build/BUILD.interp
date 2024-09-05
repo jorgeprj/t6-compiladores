@@ -34,12 +34,12 @@ null
 'misture'
 'corte'
 'bata'
-'descanse'
+'teste'
 'etapa'
 'Pao_de_Lo'
 'cobertura'
 'arroz'
-'risotto'
+'cadeira'
 'picar'
 'ralar'
 'cortar'
@@ -122,12 +122,12 @@ cmdCozinhe
 cmdMisture
 cmdCorte
 cmdBata
-cmdDescanse
+cmdTeste
 cmdEtapa
 cmdPao_de_Lo
 cmdCobertura
 cmdArroz
-cmdBaseRisotto
+cmdCadeira
 tipo_corte
 tempo
 

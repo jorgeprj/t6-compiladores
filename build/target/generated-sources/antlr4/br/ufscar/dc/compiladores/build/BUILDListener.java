@@ -198,15 +198,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdBata(BUILDParser.CmdBataContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdDescanse}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdTeste}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdDescanse(BUILDParser.CmdDescanseContext ctx);
+	void enterCmdTeste(BUILDParser.CmdTesteContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdDescanse}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdTeste}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdDescanse(BUILDParser.CmdDescanseContext ctx);
+	void exitCmdTeste(BUILDParser.CmdTesteContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmdEtapa}.
 	 * @param ctx the parse tree
@@ -248,15 +248,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdArroz(BUILDParser.CmdArrozContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdBaseRisotto}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdCadeira}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdBaseRisotto(BUILDParser.CmdBaseRisottoContext ctx);
+	void enterCmdCadeira(BUILDParser.CmdCadeiraContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdBaseRisotto}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdCadeira}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdBaseRisotto(BUILDParser.CmdBaseRisottoContext ctx);
+	void exitCmdCadeira(BUILDParser.CmdCadeiraContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#tipo_corte}.
 	 * @param ctx the parse tree

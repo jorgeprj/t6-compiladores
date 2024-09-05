@@ -30,15 +30,15 @@ public class BUILDParser extends Parser {
 		RULE_medida_solido = 8, RULE_medida_liq = 9, RULE_lista_tempero = 10, 
 		RULE_tipo_colher = 11, RULE_passo = 12, RULE_cmd = 13, RULE_cmdAsse = 14, 
 		RULE_cmdCozinhe = 15, RULE_cmdMisture = 16, RULE_cmdCorte = 17, RULE_cmdBata = 18, 
-		RULE_cmdDescanse = 19, RULE_cmdEtapa = 20, RULE_cmdPao_de_Lo = 21, RULE_cmdCobertura = 22, 
-		RULE_cmdArroz = 23, RULE_cmdBaseRisotto = 24, RULE_tipo_corte = 25, RULE_tempo = 26;
+		RULE_cmdTeste = 19, RULE_cmdEtapa = 20, RULE_cmdPao_de_Lo = 21, RULE_cmdCobertura = 22, 
+		RULE_cmdArroz = 23, RULE_cmdCadeira = 24, RULE_tipo_corte = 25, RULE_tempo = 26;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"montagem", "imagem", "nome", "tempo_mont", "unidade_tempo", "paragrafo", 
 			"componentes", "lista_componentes", "medida_solido", "medida_liq", "lista_tempero", 
 			"tipo_colher", "passo", "cmd", "cmdAsse", "cmdCozinhe", "cmdMisture", 
-			"cmdCorte", "cmdBata", "cmdDescanse", "cmdEtapa", "cmdPao_de_Lo", "cmdCobertura", 
-			"cmdArroz", "cmdBaseRisotto", "tipo_corte", "tempo"
+			"cmdCorte", "cmdBata", "cmdTeste", "cmdEtapa", "cmdPao_de_Lo", "cmdCobertura", 
+			"cmdArroz", "cmdCadeira", "tipo_corte", "tempo"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -50,7 +50,7 @@ public class BUILDParser extends Parser {
 			"'de'", "'g'", "'colher'", "'xicara'", "'ml'", "'l'", "'copo'", "'pitada'", 
 			"'a_gosto'", "'cha'", "'sobremesa'", "'sopa'", "'Passo'", "'fim_passo'", 
 			"'asse'", "'('", "','", "')'", "'cozinhe'", "'misture'", "'corte'", "'bata'", 
-			"'descanse'", "'etapa'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", "'risotto'", 
+			"'teste'", "'etapa'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", "'cadeira'", 
 			"'picar'", "'ralar'", "'cortar'"
 		};
 	}
@@ -987,8 +987,8 @@ public class BUILDParser extends Parser {
 		public CmdBataContext cmdBata() {
 			return getRuleContext(CmdBataContext.class,0);
 		}
-		public CmdDescanseContext cmdDescanse() {
-			return getRuleContext(CmdDescanseContext.class,0);
+		public CmdTesteContext cmdTeste() {
+			return getRuleContext(CmdTesteContext.class,0);
 		}
 		public CmdEtapaContext cmdEtapa() {
 			return getRuleContext(CmdEtapaContext.class,0);
@@ -1002,8 +1002,8 @@ public class BUILDParser extends Parser {
 		public CmdArrozContext cmdArroz() {
 			return getRuleContext(CmdArrozContext.class,0);
 		}
-		public CmdBaseRisottoContext cmdBaseRisotto() {
-			return getRuleContext(CmdBaseRisottoContext.class,0);
+		public CmdCadeiraContext cmdCadeira() {
+			return getRuleContext(CmdCadeiraContext.class,0);
 		}
 		public CmdContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1070,7 +1070,7 @@ public class BUILDParser extends Parser {
 				enterOuterAlt(_localctx, 6);
 				{
 				setState(156);
-				cmdDescanse();
+				cmdTeste();
 				}
 				break;
 			case T__35:
@@ -1105,7 +1105,7 @@ public class BUILDParser extends Parser {
 				enterOuterAlt(_localctx, 11);
 				{
 				setState(161);
-				cmdBaseRisotto();
+				cmdCadeira();
 				}
 				break;
 			default:
@@ -1430,32 +1430,32 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class CmdDescanseContext extends ParserRuleContext {
+	public static class CmdTesteContext extends ParserRuleContext {
 		public TempoContext tempo() {
 			return getRuleContext(TempoContext.class,0);
 		}
-		public CmdDescanseContext(ParserRuleContext parent, int invokingState) {
+		public CmdTesteContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_cmdDescanse; }
+		@Override public int getRuleIndex() { return RULE_cmdTeste; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdDescanse(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdTeste(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdDescanse(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdTeste(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdDescanse(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdTeste(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final CmdDescanseContext cmdDescanse() throws RecognitionException {
-		CmdDescanseContext _localctx = new CmdDescanseContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_cmdDescanse);
+	public final CmdTesteContext cmdTeste() throws RecognitionException {
+		CmdTesteContext _localctx = new CmdTesteContext(_ctx, getState());
+		enterRule(_localctx, 38, RULE_cmdTeste);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1663,29 +1663,29 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class CmdBaseRisottoContext extends ParserRuleContext {
-		public CmdBaseRisottoContext(ParserRuleContext parent, int invokingState) {
+	public static class CmdCadeiraContext extends ParserRuleContext {
+		public CmdCadeiraContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_cmdBaseRisotto; }
+		@Override public int getRuleIndex() { return RULE_cmdCadeira; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdBaseRisotto(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdCadeira(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdBaseRisotto(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdCadeira(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdBaseRisotto(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdCadeira(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final CmdBaseRisottoContext cmdBaseRisotto() throws RecognitionException {
-		CmdBaseRisottoContext _localctx = new CmdBaseRisottoContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_cmdBaseRisotto);
+	public final CmdCadeiraContext cmdCadeira() throws RecognitionException {
+		CmdCadeiraContext _localctx = new CmdCadeiraContext(_ctx, getState());
+		enterRule(_localctx, 48, RULE_cmdCadeira);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{

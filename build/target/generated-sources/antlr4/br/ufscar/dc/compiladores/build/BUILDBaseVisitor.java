@@ -150,7 +150,7 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCmdDescanse(BUILDParser.CmdDescanseContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCmdTeste(BUILDParser.CmdTesteContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -185,7 +185,7 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCmdBaseRisotto(BUILDParser.CmdBaseRisottoContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCmdCadeira(BUILDParser.CmdCadeiraContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

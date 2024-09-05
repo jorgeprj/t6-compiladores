@@ -196,11 +196,11 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         return null;
     }
 
-    //Visitante do comando Descanse:
+    //Visitante do comando Teste:
     @Override
-    public Void visitCmdDescanse(BUILDParser.CmdDescanseContext ctx) {
+    public Void visitCmdTeste(BUILDParser.CmdTesteContext ctx) {
         saida.append("<li>");
-        saida.append("Deixe descansar por " + ctx.tempo().getText());
+        saida.append("Teste por " + ctx.tempo().getText());
         saida.append("</li>\n");
         return null;
     }
@@ -252,17 +252,16 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         return null;
     }
 
-    //Função Risotto:
+    //Função Cadeira:
     @Override
-    public Void visitCmdBaseRisotto(BUILDParser.CmdBaseRisottoContext ctx) {
-        saida.append("<li>Refogue a cebola e o alho.</li>\n");
-        saida.append("<li>Adicione o arroz. Refogue até ficar semi-transparente</li>\n");
-        saida.append("<li>Adicione o sal e os temperos</li>\n");
-        saida.append("<li>Adicione o vinho. Misture até secar</li>\n");
-        saida.append("<li>Adicione 2 conchas do caldo. Misture até secar.</li>\n");
-        saida.append("<li>Repita o último etapa até o arroz ficar al dente.</li>\n");
-        saida.append("<li>Adicione a manteiga e deixe derreter</li>\n");
-        saida.append("<li>Misture o parmesão</li>\n");
+    public Void visitCmdCadeira(BUILDParser.CmdCadeiraContext ctx) {
+            saida.append("<li>Conecte o encosto ao assento utilizando os parafusos fornecidos.</li>\n");
+            saida.append("<li>Fixe as pernas da cadeira nas posições apropriadas sob o assento.</li>\n");
+            saida.append("<li>Certifique-se de que todos os parafusos estejam bem apertados.</li>\n");
+            saida.append("<li>Verifique a estabilidade da cadeira em uma superfície plana.</li>\n");
+            saida.append("<li>Ajuste os parafusos, se necessário, para garantir estabilidade.</li>\n");
+            saida.append("<li>Finalize a montagem verificando novamente todos os parafusos.</li>\n");
+            saida.append("<li>Cuidado: Não exceda o peso máximo recomendado de 120 kg.</li>\n");
         return null;
     }
 

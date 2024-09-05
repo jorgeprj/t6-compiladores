@@ -244,13 +244,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdDescanse(BUILDParser.CmdDescanseContext ctx) { }
+	@Override public void enterCmdTeste(BUILDParser.CmdTesteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdDescanse(BUILDParser.CmdDescanseContext ctx) { }
+	@Override public void exitCmdTeste(BUILDParser.CmdTesteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -304,13 +304,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdBaseRisotto(BUILDParser.CmdBaseRisottoContext ctx) { }
+	@Override public void enterCmdCadeira(BUILDParser.CmdCadeiraContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdBaseRisotto(BUILDParser.CmdBaseRisottoContext ctx) { }
+	@Override public void exitCmdCadeira(BUILDParser.CmdCadeiraContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

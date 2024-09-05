@@ -125,11 +125,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdBata(BUILDParser.CmdBataContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdDescanse}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdTeste}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdDescanse(BUILDParser.CmdDescanseContext ctx);
+	T visitCmdTeste(BUILDParser.CmdTesteContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmdEtapa}.
 	 * @param ctx the parse tree
@@ -155,11 +155,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdArroz(BUILDParser.CmdArrozContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdBaseRisotto}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdCadeira}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdBaseRisotto(BUILDParser.CmdBaseRisottoContext ctx);
+	T visitCmdCadeira(BUILDParser.CmdCadeiraContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#tipo_corte}.
 	 * @param ctx the parse tree

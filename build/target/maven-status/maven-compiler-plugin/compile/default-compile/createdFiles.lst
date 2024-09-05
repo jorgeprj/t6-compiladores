@@ -4,6 +4,7 @@ br\ufscar\dc\compiladores\build\BUILDVisitor.class
 br\ufscar\dc\compiladores\build\BUILDParser$Medida_liqContext.class
 br\ufscar\dc\compiladores\build\TabelaDeSimbolos$TipoBUILD.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdMistureContext.class
+br\ufscar\dc\compiladores\build\BUILDParser$CmdTesteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$ComponentesContext.class
 br\ufscar\dc\compiladores\build\BUILDListener.class
 br\ufscar\dc\compiladores\build\BUILDBaseListener.class
@@ -25,7 +26,7 @@ br\ufscar\dc\compiladores\build\BuildGeradorHTML.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tipo_corteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$MontagemContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Medida_solidoContext.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdBaseRisottoContext.class
+br\ufscar\dc\compiladores\build\BUILDParser$CmdCadeiraContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Lista_componentesContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdCoberturaContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tipo_colherContext.class
@@ -34,7 +35,6 @@ br\ufscar\dc\compiladores\build\BUILDBaseVisitor.class
 br\ufscar\dc\compiladores\build\BUILDLexer.class
 br\ufscar\dc\compiladores\build\TabelaDeSimbolos$EntradaTabelaDeSimbolos.class
 br\ufscar\dc\compiladores\build\BUILDParser$NomeContext.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdDescanseContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Lista_temperoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Unidade_tempoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdAsseContext.class
