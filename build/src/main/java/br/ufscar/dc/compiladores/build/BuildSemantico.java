@@ -29,11 +29,11 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante da lista de temperos: Verifica se o tempero já está na tabela e o adiciona:
     @Override
     public Void visitLista_tempero(BUILDParser.Lista_temperoContext ctx) {
-        String nomeTemp = ctx.TEMPERO().getText();
+        String nomeTemp = ctx.FERRAMENTA().getText();
         if (tabela.existe(nomeTemp)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.TEMPERO().getSymbol(), "Tempero " + nomeTemp + " já adicionado.");
+            SemanticoUtils.adicionarErroSemantico(ctx.FERRAMENTA().getSymbol(), "Ferramenta " + nomeTemp + " já adicionado.");
         } else {
-            tabela.adicionar(nomeTemp, TipoBUILD.TEMPERO);
+            tabela.adicionar(nomeTemp, TipoBUILD.FERRAMENTA);
         }
 
         return super.visitLista_tempero(ctx);

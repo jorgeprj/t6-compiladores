@@ -42,7 +42,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         saida.append("<center>\n");
         
         //Nome da Montagem:
-        saida.append("<h1>" + nome + "</h1>\n");
+        saida.append("<h1> Manual de Instruções: " + nome + "</h1>\n");
         saida.append("</center>\n");
         
         //Adiciona a imagem:
@@ -70,9 +70,9 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         visitComponentes(ctx.componentes());
         saida.append("</section>\n");
         
-        //Seção de preparo:
-        saida.append("<section id=\"preparo\" >\n");
-        saida.append("<h2>Modo de Preparo:</h2>\n");
+        //Seção de montagem:
+        saida.append("<section id=\"montagem\" >\n");
+        saida.append("<h2>Montagem:</h2>\n");
         visitPasso(ctx.passo());
         saida.append("</section>\n");
         
@@ -114,8 +114,8 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
 
     @Override
     public Void visitLista_tempero(BUILDParser.Lista_temperoContext ctx) {
-        String nomeTemp = ctx.TEMPERO().getText();
-        tabela.adicionar(nomeTemp, TipoBUILD.TEMPERO);
+        String nomeTemp = ctx.FERRAMENTA().getText();
+        tabela.adicionar(nomeTemp, TipoBUILD.FERRAMENTA);
         saida.append("<li>");
         if (ctx.NUMERO() != null) {
             saida.append(ctx.NUMERO().getText());
@@ -126,12 +126,12 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
             } else {
                 saida.append(" xícaras de ");
             }
-            saida.append(ctx.TEMPERO().getText());
+            saida.append(ctx.FERRAMENTA().getText());
         } else if (ctx.pitada != null) {
             saida.append("Uma pitada de ");
-            saida.append(ctx.TEMPERO().getText());
+            saida.append(ctx.FERRAMENTA().getText());
         } else if (ctx.a_gosto != null) {
-            saida.append(ctx.TEMPERO().getText());
+            saida.append(ctx.FERRAMENTA().getText());
             saida.append(" a gosto");
         }
         saida.append("</li>\n");

@@ -22,7 +22,7 @@ public class BUILDLexer extends Lexer {
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
 		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
 		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
-		T__38=39, T__39=40, NUMERO=41, PECA=42, TEMPERO=43, CADEIA=44, COMENTARIO=45, 
+		T__38=39, T__39=40, NUMERO=41, PECA=42, FERRAMENTA=43, CADEIA=44, COMENTARIO=45, 
 		WS=46;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
@@ -39,7 +39,7 @@ public class BUILDLexer extends Lexer {
 			"T__17", "T__18", "T__19", "T__20", "T__21", "T__22", "T__23", "T__24", 
 			"T__25", "T__26", "T__27", "T__28", "T__29", "T__30", "T__31", "T__32", 
 			"T__33", "T__34", "T__35", "T__36", "T__37", "T__38", "T__39", "NUMERO", 
-			"PECA", "TEMPERO", "CADEIA", "ESC_SEQ", "COMENTARIO", "WS"
+			"PECA", "FERRAMENTA", "CADEIA", "ESC_SEQ", "COMENTARIO", "WS"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -51,7 +51,7 @@ public class BUILDLexer extends Lexer {
 			"'de'", "'g'", "'colher'", "'xicara'", "'ml'", "'l'", "'copo'", "'pitada'", 
 			"'a_gosto'", "'cha'", "'sobremesa'", "'sopa'", "'Passo'", "'fim_passo'", 
 			"'aparafuse'", "'('", "')'", "'ajuste'", "','", "'cole'", "'teste'", 
-			"'etapa'", "'Armario'", "'cama'", "'mesa'", "'cadeira'", "'paralela'", 
+			"'etapa'", "'armario'", "'cama'", "'mesa'", "'cadeira'", "'paralela'", 
 			"'perpendicular'"
 		};
 	}
@@ -61,7 +61,7 @@ public class BUILDLexer extends Lexer {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, "NUMERO", "PECA", "TEMPERO", "CADEIA", 
+			null, null, null, null, null, "NUMERO", "PECA", "FERRAMENTA", "CADEIA", 
 			"COMENTARIO", "WS"
 		};
 	}
@@ -223,7 +223,7 @@ public class BUILDLexer extends Lexer {
 		"\u012b\7g\2\2\u012b\u012c\7u\2\2\u012c\u012d\7v\2\2\u012d\u012e\7g\2\2"+
 		"\u012eD\3\2\2\2\u012f\u0130\7g\2\2\u0130\u0131\7v\2\2\u0131\u0132\7c\2"+
 		"\2\u0132\u0133\7r\2\2\u0133\u0134\7c\2\2\u0134F\3\2\2\2\u0135\u0136\7"+
-		"C\2\2\u0136\u0137\7t\2\2\u0137\u0138\7o\2\2\u0138\u0139\7c\2\2\u0139\u013a"+
+		"c\2\2\u0136\u0137\7t\2\2\u0137\u0138\7o\2\2\u0138\u0139\7c\2\2\u0139\u013a"+
 		"\7t\2\2\u013a\u013b\7k\2\2\u013b\u013c\7q\2\2\u013cH\3\2\2\2\u013d\u013e"+
 		"\7e\2\2\u013e\u013f\7c\2\2\u013f\u0140\7o\2\2\u0140\u0141\7c\2\2\u0141"+
 		"J\3\2\2\2\u0142\u0143\7o\2\2\u0143\u0144\7g\2\2\u0144\u0145\7u\2\2\u0145"+

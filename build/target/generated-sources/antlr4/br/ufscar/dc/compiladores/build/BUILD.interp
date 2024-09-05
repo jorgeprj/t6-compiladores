@@ -34,7 +34,7 @@ null
 'cole'
 'teste'
 'etapa'
-'Armario'
+'armario'
 'cama'
 'mesa'
 'cadeira'
@@ -91,7 +91,7 @@ null
 null
 NUMERO
 PECA
-TEMPERO
+FERRAMENTA
 CADEIA
 COMENTARIO
 WS

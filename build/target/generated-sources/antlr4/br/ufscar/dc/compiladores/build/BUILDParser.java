@@ -22,7 +22,7 @@ public class BUILDParser extends Parser {
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
 		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
 		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
-		T__38=39, T__39=40, NUMERO=41, PECA=42, TEMPERO=43, CADEIA=44, COMENTARIO=45, 
+		T__38=39, T__39=40, NUMERO=41, PECA=42, FERRAMENTA=43, CADEIA=44, COMENTARIO=45, 
 		WS=46;
 	public static final int
 		RULE_montagem = 0, RULE_imagem = 1, RULE_nome = 2, RULE_tempo_mont = 3, 
@@ -50,7 +50,7 @@ public class BUILDParser extends Parser {
 			"'de'", "'g'", "'colher'", "'xicara'", "'ml'", "'l'", "'copo'", "'pitada'", 
 			"'a_gosto'", "'cha'", "'sobremesa'", "'sopa'", "'Passo'", "'fim_passo'", 
 			"'aparafuse'", "'('", "')'", "'ajuste'", "','", "'cole'", "'teste'", 
-			"'etapa'", "'Armario'", "'cama'", "'mesa'", "'cadeira'", "'paralela'", 
+			"'etapa'", "'armario'", "'cama'", "'mesa'", "'cadeira'", "'paralela'", 
 			"'perpendicular'"
 		};
 	}
@@ -60,7 +60,7 @@ public class BUILDParser extends Parser {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, "NUMERO", "PECA", "TEMPERO", "CADEIA", 
+			null, null, null, null, null, "NUMERO", "PECA", "FERRAMENTA", "CADEIA", 
 			"COMENTARIO", "WS"
 		};
 	}
@@ -534,7 +534,7 @@ public class BUILDParser extends Parser {
 			setState(98);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__19) | (1L << NUMERO) | (1L << TEMPERO))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__19) | (1L << NUMERO) | (1L << FERRAMENTA))) != 0)) {
 				{
 				{
 				setState(95);
@@ -755,7 +755,7 @@ public class BUILDParser extends Parser {
 		public Token pitada;
 		public Token a_gosto;
 		public TerminalNode NUMERO() { return getToken(BUILDParser.NUMERO, 0); }
-		public TerminalNode TEMPERO() { return getToken(BUILDParser.TEMPERO, 0); }
+		public TerminalNode FERRAMENTA() { return getToken(BUILDParser.FERRAMENTA, 0); }
 		public Tipo_colherContext tipo_colher() {
 			return getRuleContext(Tipo_colherContext.class,0);
 		}
@@ -819,7 +819,7 @@ public class BUILDParser extends Parser {
 				setState(127);
 				match(T__12);
 				setState(128);
-				match(TEMPERO);
+				match(FERRAMENTA);
 				}
 				break;
 			case T__19:
@@ -828,14 +828,14 @@ public class BUILDParser extends Parser {
 				setState(129);
 				((Lista_temperoContext)_localctx).pitada = match(T__19);
 				setState(130);
-				match(TEMPERO);
+				match(FERRAMENTA);
 				}
 				break;
-			case TEMPERO:
+			case FERRAMENTA:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(131);
-				match(TEMPERO);
+				match(FERRAMENTA);
 				setState(132);
 				((Lista_temperoContext)_localctx).a_gosto = match(T__20);
 				}
