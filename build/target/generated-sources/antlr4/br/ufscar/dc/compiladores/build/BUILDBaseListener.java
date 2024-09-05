@@ -100,13 +100,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLista_componentes(BUILDParser.Lista_componentesContext ctx) { }
+	@Override public void enterLista_pecas(BUILDParser.Lista_pecasContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLista_componentes(BUILDParser.Lista_componentesContext ctx) { }
+	@Override public void exitLista_pecas(BUILDParser.Lista_pecasContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -184,13 +184,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdAsse(BUILDParser.CmdAsseContext ctx) { }
+	@Override public void enterCmdAparafuse(BUILDParser.CmdAparafuseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdAsse(BUILDParser.CmdAsseContext ctx) { }
+	@Override public void exitCmdAparafuse(BUILDParser.CmdAparafuseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

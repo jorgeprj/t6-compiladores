@@ -53,11 +53,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitComponentes(BUILDParser.ComponentesContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#lista_componentes}.
+	 * Visit a parse tree produced by {@link BUILDParser#lista_pecas}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLista_componentes(BUILDParser.Lista_componentesContext ctx);
+	T visitLista_pecas(BUILDParser.Lista_pecasContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#medida_solido}.
 	 * @param ctx the parse tree
@@ -95,11 +95,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmd(BUILDParser.CmdContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdAsse}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdAparafuse}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdAsse(BUILDParser.CmdAsseContext ctx);
+	T visitCmdAparafuse(BUILDParser.CmdAparafuseContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmdCozinhe}.
 	 * @param ctx the parse tree

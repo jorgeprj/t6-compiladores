@@ -19,9 +19,9 @@ pitada pimenta
 fim_componentes
 
 Passo:
-cadeira()
 etapa("Empane o risotto na farinha de rosca, fazendo pequenas bolinhas.")
 etapa("Frite as bolinhas de risotto até dourar.")
+aparafuse(Cebola)
 teste(5 min)
 fim_passo
 fim_montagem

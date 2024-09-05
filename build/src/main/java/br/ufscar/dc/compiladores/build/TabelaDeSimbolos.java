@@ -6,7 +6,7 @@ import java.util.Map;
 public class TabelaDeSimbolos {
     public enum TipoBUILD{
         NUMERO,
-        COMPONENTE,
+        PECA,
         TEMPERO,
         CADEIA,
         INVALIDO

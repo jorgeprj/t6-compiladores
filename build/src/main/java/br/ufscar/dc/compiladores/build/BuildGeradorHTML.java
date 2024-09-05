@@ -85,7 +85,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     //Visitante para os Componentes:
     @Override
     public Void visitComponentes(BUILDParser.ComponentesContext ctx) {
-        ctx.lista_componentes().forEach(ing -> visitLista_componentes(ing));
+        ctx.lista_pecas().forEach(ing -> visitLista_pecas(ing));
         if (ctx.lista_tempero() != null) {
             ctx.lista_tempero().forEach(temp -> visitLista_tempero(temp));
         }
@@ -93,10 +93,10 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitLista_componentes(BUILDParser.Lista_componentesContext ctx) {
-        if (ctx.COMPONENTE() != null) {
-            String nomeIng = ctx.COMPONENTE().getText();
-            tabela.adicionar(nomeIng, TipoBUILD.COMPONENTE);
+    public Void visitLista_pecas(BUILDParser.Lista_pecasContext ctx) {
+        if (ctx.PECA() != null) {
+            String nomeIng = ctx.PECA().getText();
+            tabela.adicionar(nomeIng, TipoBUILD.PECA);
             saida.append("<li>");
             if (ctx.medida_liq() != null) {
                 saida.append(ctx.medida_liq().getText() + " de ");
@@ -107,7 +107,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
                     saida.append(ctx.medida_solido().getText() + " de ");
                 }
             }
-            saida.append(ctx.COMPONENTE().getText() + "</li>\n");
+            saida.append(ctx.PECA().getText() + "</li>\n");
         }
         return null;
     }
@@ -145,9 +145,9 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitCmdAsse(BUILDParser.CmdAsseContext ctx) {
+    public Void visitCmdAparafuse(BUILDParser.CmdAparafuseContext ctx) {
         saida.append("<li>");
-        saida.append("Asse o componente " + ctx.COMPONENTE().getText() + " por " + ctx.tempo().getText() + " a " + ctx.NUMERO().getText() + " graus Celsius.");
+        saida.append("Aparafuse a peça " + ctx.PECA().getText());
         saida.append("</li>\n");
         return null;
     }
@@ -155,7 +155,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdCozinhe(BUILDParser.CmdCozinheContext ctx) {
         saida.append("<li>");
-        saida.append("Cozinhe " + ctx.COMPONENTE().getText() + " por " + ctx.tempo().getText());
+        saida.append("Cozinhe " + ctx.PECA().getText() + " por " + ctx.tempo().getText());
         saida.append("</li>\n");
         return null;
     }
@@ -163,10 +163,10 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdMisture(BUILDParser.CmdMistureContext ctx) {
         saida.append("<li>");
-        saida.append("Misture " + ctx.COMPONENTE(0) + " com ");
-        for (int i = 1; i < ctx.COMPONENTE().size(); i++) {
-            saida.append(ctx.COMPONENTE(i));
-            if (i != ctx.COMPONENTE().size() - 1) {
+        saida.append("Misture " + ctx.PECA(0) + " com ");
+        for (int i = 1; i < ctx.PECA().size(); i++) {
+            saida.append(ctx.PECA(i));
+            if (i != ctx.PECA().size() - 1) {
                 saida.append(" e ");
             }
         }
@@ -177,7 +177,7 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdCorte(BUILDParser.CmdCorteContext ctx) {
         saida.append("<li>");
-        saida.append(ctx.tipo_corte().getText() + " o componente " + ctx.COMPONENTE().getText());
+        saida.append(ctx.tipo_corte().getText() + " a peça " + ctx.PECA().getText());
         saida.append("</li>\n");
         return null;
     }
@@ -185,10 +185,10 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     @Override
     public Void visitCmdBata(BUILDParser.CmdBataContext ctx) {
         saida.append("<li>");
-        saida.append("Bata " + ctx.COMPONENTE(0) + " com ");
-        for (int i = 1; i < ctx.COMPONENTE().size(); i++) {
-            saida.append(ctx.COMPONENTE(i));
-            if (i != ctx.COMPONENTE().size() - 1) {
+        saida.append("Bata " + ctx.PECA(0) + " com ");
+        for (int i = 1; i < ctx.PECA().size(); i++) {
+            saida.append(ctx.PECA(i));
+            if (i != ctx.PECA().size() - 1) {
                 saida.append(" e ");
             }
         }

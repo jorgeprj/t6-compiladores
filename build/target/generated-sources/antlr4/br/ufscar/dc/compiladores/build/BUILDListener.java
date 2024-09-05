@@ -78,15 +78,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitComponentes(BUILDParser.ComponentesContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#lista_componentes}.
+	 * Enter a parse tree produced by {@link BUILDParser#lista_pecas}.
 	 * @param ctx the parse tree
 	 */
-	void enterLista_componentes(BUILDParser.Lista_componentesContext ctx);
+	void enterLista_pecas(BUILDParser.Lista_pecasContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#lista_componentes}.
+	 * Exit a parse tree produced by {@link BUILDParser#lista_pecas}.
 	 * @param ctx the parse tree
 	 */
-	void exitLista_componentes(BUILDParser.Lista_componentesContext ctx);
+	void exitLista_pecas(BUILDParser.Lista_pecasContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#medida_solido}.
 	 * @param ctx the parse tree
@@ -148,15 +148,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmd(BUILDParser.CmdContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdAsse}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdAparafuse}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdAsse(BUILDParser.CmdAsseContext ctx);
+	void enterCmdAparafuse(BUILDParser.CmdAparafuseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdAsse}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdAparafuse}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdAsse(BUILDParser.CmdAsseContext ctx);
+	void exitCmdAparafuse(BUILDParser.CmdAparafuseContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmdCozinhe}.
 	 * @param ctx the parse tree
