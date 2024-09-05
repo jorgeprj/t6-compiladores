@@ -1,12 +1,11 @@
-br\ufscar\dc\compiladores\build\BUILDParser$CmdPao_de_LoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$ParagrafoContext.class
 br\ufscar\dc\compiladores\build\BUILDVisitor.class
 br\ufscar\dc\compiladores\build\BUILDParser$Medida_liqContext.class
 br\ufscar\dc\compiladores\build\TabelaDeSimbolos$TipoBUILD.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdMistureContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdTesteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$ComponentesContext.class
 br\ufscar\dc\compiladores\build\BUILDListener.class
+br\ufscar\dc\compiladores\build\BUILDParser$CmdArmarioContext.class
 br\ufscar\dc\compiladores\build\BUILDBaseListener.class
 br\ufscar\dc\compiladores\build\SemanticoUtils.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tempo_montContext.class
@@ -15,10 +14,9 @@ br\ufscar\dc\compiladores\build\BUILDParser$Lista_pecasContext.class
 br\ufscar\dc\compiladores\build\TabelaDeSimbolos.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdEtapaContext.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdArrozContext.class
+br\ufscar\dc\compiladores\build\BUILDParser$CmdMesaContext.class
 br\ufscar\dc\compiladores\build\BUILDParser.class
 br\ufscar\dc\compiladores\build\Principal.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdCozinheContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$PassoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tipo_ajusteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$TempoContext.class
@@ -27,9 +25,9 @@ br\ufscar\dc\compiladores\build\BUILDParser$CmdColeContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$MontagemContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Medida_solidoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdCadeiraContext.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdCoberturaContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tipo_colherContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$ImagemContext.class
+br\ufscar\dc\compiladores\build\BUILDParser$CmdCamaContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdAparafuseContext.class
 br\ufscar\dc\compiladores\build\BUILDBaseVisitor.class
 br\ufscar\dc\compiladores\build\BUILDLexer.class

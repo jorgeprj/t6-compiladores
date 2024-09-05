@@ -196,30 +196,6 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdCozinhe(BUILDParser.CmdCozinheContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitCmdCozinhe(BUILDParser.CmdCozinheContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterCmdMisture(BUILDParser.CmdMistureContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitCmdMisture(BUILDParser.CmdMistureContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterCmdAjuste(BUILDParser.CmdAjusteContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -268,37 +244,37 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdPao_de_Lo(BUILDParser.CmdPao_de_LoContext ctx) { }
+	@Override public void enterCmdArmario(BUILDParser.CmdArmarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdPao_de_Lo(BUILDParser.CmdPao_de_LoContext ctx) { }
+	@Override public void exitCmdArmario(BUILDParser.CmdArmarioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdCobertura(BUILDParser.CmdCoberturaContext ctx) { }
+	@Override public void enterCmdCama(BUILDParser.CmdCamaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdCobertura(BUILDParser.CmdCoberturaContext ctx) { }
+	@Override public void exitCmdCama(BUILDParser.CmdCamaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdArroz(BUILDParser.CmdArrozContext ctx) { }
+	@Override public void enterCmdMesa(BUILDParser.CmdMesaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdArroz(BUILDParser.CmdArrozContext ctx) { }
+	@Override public void exitCmdMesa(BUILDParser.CmdMesaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

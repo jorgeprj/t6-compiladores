@@ -25,5 +25,7 @@ aparafuse(Cebola)
 ajuste(Vinho, paralela)
 cole(Vinho, Cebola)
 teste(5 min)
+armario()
+mesa()
 fim_passo
 fim_montagem

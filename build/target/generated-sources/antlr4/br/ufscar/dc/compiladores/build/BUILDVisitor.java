@@ -101,18 +101,6 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdAparafuse(BUILDParser.CmdAparafuseContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdCozinhe}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCmdCozinhe(BUILDParser.CmdCozinheContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdMisture}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCmdMisture(BUILDParser.CmdMistureContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmdAjuste}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -137,23 +125,23 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdEtapa(BUILDParser.CmdEtapaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdPao_de_Lo}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdArmario}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdPao_de_Lo(BUILDParser.CmdPao_de_LoContext ctx);
+	T visitCmdArmario(BUILDParser.CmdArmarioContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdCobertura}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdCama}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdCobertura(BUILDParser.CmdCoberturaContext ctx);
+	T visitCmdCama(BUILDParser.CmdCamaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdArroz}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdMesa}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdArroz(BUILDParser.CmdArrozContext ctx);
+	T visitCmdMesa(BUILDParser.CmdMesaContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmdCadeira}.
 	 * @param ctx the parse tree

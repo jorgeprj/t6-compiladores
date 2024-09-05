@@ -49,15 +49,6 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
         return super.visitCmdAparafuse(ctx);
     }
     
-    //Visitante do comando Cozinhe:
-    @Override
-    public Void visitCmdCozinhe(BUILDParser.CmdCozinheContext ctx) {
-        String Ing = ctx.PECA().getText();
-        if (!tabela.existe(Ing)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Componente " + Ing + " não declarado.");
-        }
-        return super.visitCmdCozinhe(ctx);
-    }
 
     //Visitante do comando Ajuste:
     @Override
@@ -67,18 +58,6 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
             SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça" + Pec + " não declarado.");
         }
         return super.visitCmdAjuste(ctx);
-    }
-
-    //Visitante do comando Misture:
-    @Override
-    public Void visitCmdMisture(BUILDParser.CmdMistureContext ctx) {
-        for (var pec : ctx.PECA()) {
-            String nome_pec = pec.getText();
-            if (!tabela.existe(nome_pec)) {
-                SemanticoUtils.adicionarErroSemantico(pec.getSymbol(), "Componente " + nome_pec + " não declarado.");
-            }
-        }
-        return super.visitCmdMisture(ctx);
     }
 
     //Visitante do comando Cole:

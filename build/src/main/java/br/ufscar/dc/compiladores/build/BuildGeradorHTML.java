@@ -153,28 +153,6 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitCmdCozinhe(BUILDParser.CmdCozinheContext ctx) {
-        saida.append("<li>");
-        saida.append("Cozinhe " + ctx.PECA().getText() + " por " + ctx.tempo().getText());
-        saida.append("</li>\n");
-        return null;
-    }
-
-    @Override
-    public Void visitCmdMisture(BUILDParser.CmdMistureContext ctx) {
-        saida.append("<li>");
-        saida.append("Misture " + ctx.PECA(0) + " com ");
-        for (int i = 1; i < ctx.PECA().size(); i++) {
-            saida.append(ctx.PECA(i));
-            if (i != ctx.PECA().size() - 1) {
-                saida.append(" e ");
-            }
-        }
-        saida.append("</li>\n");
-        return null;
-    }
-
-    @Override
     public Void visitCmdAjuste(BUILDParser.CmdAjusteContext ctx) {
         saida.append("<li>");
         saida.append("Ajuste a peça " + ctx.PECA().getText() + " de forma " + ctx.tipo_ajuste().getText());
@@ -216,39 +194,34 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
         return null;
     }
 
-    //Função Pao_de_Lo:
+    //Função Armario:
     @Override
-    public Void visitCmdPao_de_Lo(BUILDParser.CmdPao_de_LoContext ctx) {
-        saida.append("<li>Quebre 4 ovos, separe as claras das gemas</li>\n");
-        saida.append("<li>Bata as claras em neve. Reserve.</li>\n");
-        saida.append("<li>Adicione as gemas com uma xícara de água morna. Bata até espumar.</li>\n");
-        saida.append("<li>Acrescente 2 xícaras de chá de açúcar e bata até misturar.</li>\n");
-        saida.append("<li>Adicione 2 xícaras de chá de farinha de trigo, 1 colher de sopa de fermento em pó e misture com um fouet.</li>\n");
-        saida.append("<li>Misture as claras em neve.</li>\n");
-        saida.append("<li>Despeje em uma forma untada.</li>\n");
-        saida.append("<li>Asse por 30min a 180 graus Celsius</li>\n");
+    public Void visitCmdArmario(BUILDParser.CmdArmarioContext ctx) {
+        saida.append("<li>Monte a base do armário, fixando as laterais e a parte inferior.</li>\n");
+        saida.append("<li>Coloque as prateleiras e ajuste as distâncias conforme necessário.</li>\n");
+        saida.append("<li>Instale as portas do armário e ajuste as dobradiças.</li>\n");
+        saida.append("<li>Verifique se todos os parafusos estão bem apertados e se o armário está nivelado.</li>\n");
+        saida.append("<li>Limpe o local e faça os ajustes finais.</li>\n");
         return null;
     }
 
-    //Função Cobertura:
+    //Função Cama:
     @Override
-    public Void visitCmdCobertura(BUILDParser.CmdCoberturaContext ctx) {
-        saida.append("<li>Em uma panela, misture o leite, o chocolate em pó e a margarina.</li>\n");
-        saida.append("<li>Leve ao fogo médio até ferver.</li>\n");
-        saida.append("<li>Quando começar a ferver acrescente o leite condensado.</li>\n");
-        saida.append("<li>Mexa até ferver e ficar um pouco consistente.</li>\n");
-        saida.append("<li>Retire do fogo e a cobertura está pronta.</li>\n");
+    public Void visitCmdCama(BUILDParser.CmdCamaContext ctx) {
+        saida.append("<li>Monte a estrutura da cama, fixando os pés e as laterais ao cabeceira e à base.</li>\n");
+        saida.append("<li>Coloque o colchão sobre a estrutura da cama.</li>\n");
+        saida.append("<li>Ajuste a cama para garantir que está nivelada e estável.</li>\n");
+        saida.append("<li>Arrume os lençóis e travesseiros para finalizar.</li>\n");
         return null;
     }
 
-    //Função Arroz:
+    //Função Mesa:
     @Override
-    public Void visitCmdArroz(BUILDParser.CmdArrozContext ctx) {
-        saida.append("<li>Refogue a cebola e o alho.</li>\n");
-        saida.append("<li>Adicione o arroz. Refogue até ficar semi-transparente</li>\n");
-        saida.append("<li>Adicione a água e o tempero.</li>\n");
-        saida.append("<li>Deixe até secar.</li>\n");
-        saida.append("<li>Se ainda não estiver pronto, adicione mais água.</li>\n");
+    public Void visitCmdMesa(BUILDParser.CmdMesaContext ctx) {
+        saida.append("<li>Monte as pernas da mesa, fixando-as ao tampo usando os parafusos.</li>\n");
+        saida.append("<li>Ajuste a mesa para garantir que está nivelada e estável.</li>\n");
+        saida.append("<li>Verifique se todos os parafusos estão bem apertados.</li>\n");
+        saida.append("<li>Limpe a mesa e o local ao redor para finalizar a montagem.</li>\n");
         return null;
     }
 

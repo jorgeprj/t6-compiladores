@@ -158,26 +158,6 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdAparafuse(BUILDParser.CmdAparafuseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdCozinhe}.
-	 * @param ctx the parse tree
-	 */
-	void enterCmdCozinhe(BUILDParser.CmdCozinheContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdCozinhe}.
-	 * @param ctx the parse tree
-	 */
-	void exitCmdCozinhe(BUILDParser.CmdCozinheContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdMisture}.
-	 * @param ctx the parse tree
-	 */
-	void enterCmdMisture(BUILDParser.CmdMistureContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdMisture}.
-	 * @param ctx the parse tree
-	 */
-	void exitCmdMisture(BUILDParser.CmdMistureContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmdAjuste}.
 	 * @param ctx the parse tree
 	 */
@@ -218,35 +198,35 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdEtapa(BUILDParser.CmdEtapaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdPao_de_Lo}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdArmario}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdPao_de_Lo(BUILDParser.CmdPao_de_LoContext ctx);
+	void enterCmdArmario(BUILDParser.CmdArmarioContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdPao_de_Lo}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdArmario}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdPao_de_Lo(BUILDParser.CmdPao_de_LoContext ctx);
+	void exitCmdArmario(BUILDParser.CmdArmarioContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdCobertura}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdCama}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdCobertura(BUILDParser.CmdCoberturaContext ctx);
+	void enterCmdCama(BUILDParser.CmdCamaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdCobertura}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdCama}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdCobertura(BUILDParser.CmdCoberturaContext ctx);
+	void exitCmdCama(BUILDParser.CmdCamaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdArroz}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdMesa}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdArroz(BUILDParser.CmdArrozContext ctx);
+	void enterCmdMesa(BUILDParser.CmdMesaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdArroz}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdMesa}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdArroz(BUILDParser.CmdArrozContext ctx);
+	void exitCmdMesa(BUILDParser.CmdMesaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmdCadeira}.
 	 * @param ctx the parse tree
