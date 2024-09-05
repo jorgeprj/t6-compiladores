@@ -183,13 +183,13 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitCmdBata(BUILDParser.CmdBataContext ctx) {
+    public Void visitCmdCole(BUILDParser.CmdColeContext ctx) {
         saida.append("<li>");
-        saida.append("Bata " + ctx.PECA(0) + " com ");
+        saida.append("Cole a peça " + ctx.PECA(0) + " na peça ");
         for (int i = 1; i < ctx.PECA().size(); i++) {
             saida.append(ctx.PECA(i));
             if (i != ctx.PECA().size() - 1) {
-                saida.append(" e ");
+                saida.append(" e na peça ");
             }
         }
         saida.append("</li>\n");

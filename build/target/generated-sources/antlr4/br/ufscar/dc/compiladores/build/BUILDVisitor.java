@@ -119,11 +119,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCmdAjuste(BUILDParser.CmdAjusteContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#cmdBata}.
+	 * Visit a parse tree produced by {@link BUILDParser#cmdCole}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCmdBata(BUILDParser.CmdBataContext ctx);
+	T visitCmdCole(BUILDParser.CmdColeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#cmdTeste}.
 	 * @param ctx the parse tree

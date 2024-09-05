@@ -232,13 +232,13 @@ public class BUILDBaseListener implements BUILDListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCmdBata(BUILDParser.CmdBataContext ctx) { }
+	@Override public void enterCmdCole(BUILDParser.CmdColeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCmdBata(BUILDParser.CmdBataContext ctx) { }
+	@Override public void exitCmdCole(BUILDParser.CmdColeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

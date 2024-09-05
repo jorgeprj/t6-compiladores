@@ -188,15 +188,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitCmdAjuste(BUILDParser.CmdAjusteContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#cmdBata}.
+	 * Enter a parse tree produced by {@link BUILDParser#cmdCole}.
 	 * @param ctx the parse tree
 	 */
-	void enterCmdBata(BUILDParser.CmdBataContext ctx);
+	void enterCmdCole(BUILDParser.CmdColeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#cmdBata}.
+	 * Exit a parse tree produced by {@link BUILDParser#cmdCole}.
 	 * @param ctx the parse tree
 	 */
-	void exitCmdBata(BUILDParser.CmdBataContext ctx);
+	void exitCmdCole(BUILDParser.CmdColeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#cmdTeste}.
 	 * @param ctx the parse tree

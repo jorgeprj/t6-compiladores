@@ -52,8 +52,8 @@ public class BUILDLexer extends Lexer {
 			"'de'", "'g'", "'colher'", "'xicara'", "'ml'", "'l'", "'copo'", "'pitada'", 
 			"'a_gosto'", "'cha'", "'sobremesa'", "'sopa'", "'Passo'", "'fim_passo'", 
 			"'aparafuse'", "'('", "')'", "'cozinhe'", "','", "'misture'", "'ajuste'", 
-			"'bata'", "'teste'", "'etapa'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", 
-			"'cadeira'", "'paralelo'", "'perpendicular'"
+			"'cole'", "'teste'", "'etapa'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", 
+			"'cadeira'", "'paralela'", "'perpendicular'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -226,8 +226,8 @@ public class BUILDLexer extends Lexer {
 		"\7o\2\2\u012a\u012b\7k\2\2\u012b\u012c\7u\2\2\u012c\u012d\7v\2\2\u012d"+
 		"\u012e\7w\2\2\u012e\u012f\7t\2\2\u012f\u0130\7g\2\2\u0130B\3\2\2\2\u0131"+
 		"\u0132\7c\2\2\u0132\u0133\7l\2\2\u0133\u0134\7w\2\2\u0134\u0135\7u\2\2"+
-		"\u0135\u0136\7v\2\2\u0136\u0137\7g\2\2\u0137D\3\2\2\2\u0138\u0139\7d\2"+
-		"\2\u0139\u013a\7c\2\2\u013a\u013b\7v\2\2\u013b\u013c\7c\2\2\u013cF\3\2"+
+		"\u0135\u0136\7v\2\2\u0136\u0137\7g\2\2\u0137D\3\2\2\2\u0138\u0139\7e\2"+
+		"\2\u0139\u013a\7q\2\2\u013a\u013b\7n\2\2\u013b\u013c\7g\2\2\u013cF\3\2"+
 		"\2\2\u013d\u013e\7v\2\2\u013e\u013f\7g\2\2\u013f\u0140\7u\2\2\u0140\u0141"+
 		"\7v\2\2\u0141\u0142\7g\2\2\u0142H\3\2\2\2\u0143\u0144\7g\2\2\u0144\u0145"+
 		"\7v\2\2\u0145\u0146\7c\2\2\u0146\u0147\7r\2\2\u0147\u0148\7c\2\2\u0148"+
@@ -242,7 +242,7 @@ public class BUILDLexer extends Lexer {
 		"\u0167\u0168\7k\2\2\u0168\u0169\7t\2\2\u0169\u016a\7c\2\2\u016aR\3\2\2"+
 		"\2\u016b\u016c\7r\2\2\u016c\u016d\7c\2\2\u016d\u016e\7t\2\2\u016e\u016f"+
 		"\7c\2\2\u016f\u0170\7n\2\2\u0170\u0171\7g\2\2\u0171\u0172\7n\2\2\u0172"+
-		"\u0173\7q\2\2\u0173T\3\2\2\2\u0174\u0175\7r\2\2\u0175\u0176\7g\2\2\u0176"+
+		"\u0173\7c\2\2\u0173T\3\2\2\2\u0174\u0175\7r\2\2\u0175\u0176\7g\2\2\u0176"+
 		"\u0177\7t\2\2\u0177\u0178\7r\2\2\u0178\u0179\7g\2\2\u0179\u017a\7p\2\2"+
 		"\u017a\u017b\7f\2\2\u017b\u017c\7k\2\2\u017c\u017d\7e\2\2\u017d\u017e"+
 		"\7w\2\2\u017e\u017f\7n\2\2\u017f\u0180\7c\2\2\u0180\u0181\7t\2\2\u0181"+

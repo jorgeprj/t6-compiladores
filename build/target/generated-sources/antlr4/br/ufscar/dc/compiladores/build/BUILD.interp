@@ -33,14 +33,14 @@ null
 ','
 'misture'
 'ajuste'
-'bata'
+'cole'
 'teste'
 'etapa'
 'Pao_de_Lo'
 'cobertura'
 'arroz'
 'cadeira'
-'paralelo'
+'paralela'
 'perpendicular'
 null
 null
@@ -119,7 +119,7 @@ cmdAparafuse
 cmdCozinhe
 cmdMisture
 cmdAjuste
-cmdBata
+cmdCole
 cmdTeste
 cmdEtapa
 cmdPao_de_Lo

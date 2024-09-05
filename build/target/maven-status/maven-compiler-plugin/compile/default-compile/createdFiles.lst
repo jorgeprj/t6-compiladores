@@ -13,7 +13,6 @@ br\ufscar\dc\compiladores\build\BUILDParser$Tempo_montContext.class
 br\ufscar\dc\compiladores\build\BuildSemantico.class
 br\ufscar\dc\compiladores\build\BUILDParser$Lista_pecasContext.class
 br\ufscar\dc\compiladores\build\TabelaDeSimbolos.class
-br\ufscar\dc\compiladores\build\BUILDParser$CmdBataContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdEtapaContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdArrozContext.class
@@ -24,6 +23,7 @@ br\ufscar\dc\compiladores\build\BUILDParser$PassoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tipo_ajusteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$TempoContext.class
 br\ufscar\dc\compiladores\build\BuildGeradorHTML.class
+br\ufscar\dc\compiladores\build\BUILDParser$CmdColeContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$MontagemContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Medida_solidoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdCadeiraContext.class

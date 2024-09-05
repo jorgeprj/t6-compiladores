@@ -29,7 +29,7 @@ public class BUILDParser extends Parser {
 		RULE_unidade_tempo = 4, RULE_paragrafo = 5, RULE_componentes = 6, RULE_lista_pecas = 7, 
 		RULE_medida_solido = 8, RULE_medida_liq = 9, RULE_lista_tempero = 10, 
 		RULE_tipo_colher = 11, RULE_passo = 12, RULE_cmd = 13, RULE_cmdAparafuse = 14, 
-		RULE_cmdCozinhe = 15, RULE_cmdMisture = 16, RULE_cmdAjuste = 17, RULE_cmdBata = 18, 
+		RULE_cmdCozinhe = 15, RULE_cmdMisture = 16, RULE_cmdAjuste = 17, RULE_cmdCole = 18, 
 		RULE_cmdTeste = 19, RULE_cmdEtapa = 20, RULE_cmdPao_de_Lo = 21, RULE_cmdCobertura = 22, 
 		RULE_cmdArroz = 23, RULE_cmdCadeira = 24, RULE_tipo_ajuste = 25, RULE_tempo = 26;
 	private static String[] makeRuleNames() {
@@ -37,7 +37,7 @@ public class BUILDParser extends Parser {
 			"montagem", "imagem", "nome", "tempo_mont", "unidade_tempo", "paragrafo", 
 			"componentes", "lista_pecas", "medida_solido", "medida_liq", "lista_tempero", 
 			"tipo_colher", "passo", "cmd", "cmdAparafuse", "cmdCozinhe", "cmdMisture", 
-			"cmdAjuste", "cmdBata", "cmdTeste", "cmdEtapa", "cmdPao_de_Lo", "cmdCobertura", 
+			"cmdAjuste", "cmdCole", "cmdTeste", "cmdEtapa", "cmdPao_de_Lo", "cmdCobertura", 
 			"cmdArroz", "cmdCadeira", "tipo_ajuste", "tempo"
 		};
 	}
@@ -50,8 +50,8 @@ public class BUILDParser extends Parser {
 			"'de'", "'g'", "'colher'", "'xicara'", "'ml'", "'l'", "'copo'", "'pitada'", 
 			"'a_gosto'", "'cha'", "'sobremesa'", "'sopa'", "'Passo'", "'fim_passo'", 
 			"'aparafuse'", "'('", "')'", "'cozinhe'", "','", "'misture'", "'ajuste'", 
-			"'bata'", "'teste'", "'etapa'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", 
-			"'cadeira'", "'paralelo'", "'perpendicular'"
+			"'cole'", "'teste'", "'etapa'", "'Pao_de_Lo'", "'cobertura'", "'arroz'", 
+			"'cadeira'", "'paralela'", "'perpendicular'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -984,8 +984,8 @@ public class BUILDParser extends Parser {
 		public CmdAjusteContext cmdAjuste() {
 			return getRuleContext(CmdAjusteContext.class,0);
 		}
-		public CmdBataContext cmdBata() {
-			return getRuleContext(CmdBataContext.class,0);
+		public CmdColeContext cmdCole() {
+			return getRuleContext(CmdColeContext.class,0);
 		}
 		public CmdTesteContext cmdTeste() {
 			return getRuleContext(CmdTesteContext.class,0);
@@ -1063,7 +1063,7 @@ public class BUILDParser extends Parser {
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(155);
-				cmdBata();
+				cmdCole();
 				}
 				break;
 			case T__34:
@@ -1349,33 +1349,33 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class CmdBataContext extends ParserRuleContext {
+	public static class CmdColeContext extends ParserRuleContext {
 		public List<TerminalNode> PECA() { return getTokens(BUILDParser.PECA); }
 		public TerminalNode PECA(int i) {
 			return getToken(BUILDParser.PECA, i);
 		}
-		public CmdBataContext(ParserRuleContext parent, int invokingState) {
+		public CmdColeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_cmdBata; }
+		@Override public int getRuleIndex() { return RULE_cmdCole; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdBata(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterCmdCole(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdBata(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitCmdCole(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdBata(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitCmdCole(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final CmdBataContext cmdBata() throws RecognitionException {
-		CmdBataContext _localctx = new CmdBataContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_cmdBata);
+	public final CmdColeContext cmdCole() throws RecognitionException {
+		CmdColeContext _localctx = new CmdColeContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_cmdCole);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);

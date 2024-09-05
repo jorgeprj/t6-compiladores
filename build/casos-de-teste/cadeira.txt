@@ -5,7 +5,7 @@ Tempo: 35 min
 Paragrafo:"Esta cadeira moderna combina conforto e estilo, tornando-a ideal para uso em diversos ambientes, como salas de jantar, escritórios, e áreas de convivência. Com um design ergonômico, oferece um assento acolchoado que proporciona suporte adequado para a coluna, garantindo conforto durante longos períodos de uso."
 
 Componentes:
-2 xicara de ArrozArboreo
+1 xicara de Cola
 1 xicara de Cebola
 1 colher sobremesa de Alho
 1 xicara de Vinho
@@ -23,6 +23,7 @@ etapa("Empane o risotto na farinha de rosca, fazendo pequenas bolinhas.")
 etapa("Frite as bolinhas de risotto até dourar.")
 aparafuse(Cebola)
 ajuste(Vinho, paralela)
+cole(Vinho, Cebola)
 teste(5 min)
 fim_passo
 fim_montagem

@@ -17,11 +17,11 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante da lista de pecass: Verifica se a peca já está na tabela e o adiciona:
     @Override
     public Void visitLista_pecas(BUILDParser.Lista_pecasContext ctx) {
-        String nomeIng = ctx.PECA().getText();
-        if (tabela.existe(nomeIng)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça " + nomeIng + " já adicionado.");
+        String nomePec = ctx.PECA().getText();
+        if (tabela.existe(nomePec)) {
+            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça " + nomePec + " já adicionado.");
         } else {
-            tabela.adicionar(nomeIng, TipoBUILD.PECA);
+            tabela.adicionar(nomePec, TipoBUILD.PECA);
         }
         return super.visitLista_pecas(ctx);
     }
@@ -72,24 +72,24 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Misture:
     @Override
     public Void visitCmdMisture(BUILDParser.CmdMistureContext ctx) {
-        for (var ing : ctx.PECA()) {
-            String nome_ing = ing.getText();
-            if (!tabela.existe(nome_ing)) {
-                SemanticoUtils.adicionarErroSemantico(ing.getSymbol(), "Componente " + nome_ing + " não declarado.");
+        for (var pec : ctx.PECA()) {
+            String nome_pec = pec.getText();
+            if (!tabela.existe(nome_pec)) {
+                SemanticoUtils.adicionarErroSemantico(pec.getSymbol(), "Componente " + nome_pec + " não declarado.");
             }
         }
         return super.visitCmdMisture(ctx);
     }
 
-    //Visitante do comando Bata:
+    //Visitante do comando Cole:
     @Override
-    public Void visitCmdBata(BUILDParser.CmdBataContext ctx) {
-        for (var ing : ctx.PECA()) {
-            String nome_ing = ing.getText();
-            if (!tabela.existe(nome_ing)) {
-                SemanticoUtils.adicionarErroSemantico(ing.getSymbol(), "Componente " + nome_ing + " não declarado.");
+    public Void visitCmdCole(BUILDParser.CmdColeContext ctx) {
+        for (var pec : ctx.PECA()) {
+            String nome_pec = pec.getText();
+            if (!tabela.existe(nome_pec)) {
+                SemanticoUtils.adicionarErroSemantico(pec.getSymbol(), "Peça " + nome_pec + " não declarado.");
             }
         }
-        return super.visitCmdBata(ctx);
+        return super.visitCmdCole(ctx);
     }
 }
