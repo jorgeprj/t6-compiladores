@@ -87,7 +87,7 @@ public class BUILDBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLista_tempero(BUILDParser.Lista_temperoContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

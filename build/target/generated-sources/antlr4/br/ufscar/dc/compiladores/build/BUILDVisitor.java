@@ -71,11 +71,11 @@ public interface BUILDVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitMedida_liq(BUILDParser.Medida_liqContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link BUILDParser#lista_tempero}.
+	 * Visit a parse tree produced by {@link BUILDParser#lista_ferramentas}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLista_tempero(BUILDParser.Lista_temperoContext ctx);
+	T visitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link BUILDParser#tipo_colher}.
 	 * @param ctx the parse tree

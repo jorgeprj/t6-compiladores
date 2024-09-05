@@ -108,15 +108,15 @@ public interface BUILDListener extends ParseTreeListener {
 	 */
 	void exitMedida_liq(BUILDParser.Medida_liqContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link BUILDParser#lista_tempero}.
+	 * Enter a parse tree produced by {@link BUILDParser#lista_ferramentas}.
 	 * @param ctx the parse tree
 	 */
-	void enterLista_tempero(BUILDParser.Lista_temperoContext ctx);
+	void enterLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link BUILDParser#lista_tempero}.
+	 * Exit a parse tree produced by {@link BUILDParser#lista_ferramentas}.
 	 * @param ctx the parse tree
 	 */
-	void exitLista_tempero(BUILDParser.Lista_temperoContext ctx);
+	void exitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link BUILDParser#tipo_colher}.
 	 * @param ctx the parse tree

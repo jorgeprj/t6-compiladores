@@ -21,6 +21,7 @@ br\ufscar\dc\compiladores\build\BUILDParser$PassoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Tipo_ajusteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$TempoContext.class
 br\ufscar\dc\compiladores\build\BuildGeradorHTML.class
+br\ufscar\dc\compiladores\build\BUILDParser$Lista_ferramentasContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdColeContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$MontagemContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Medida_solidoContext.class
@@ -34,5 +35,4 @@ br\ufscar\dc\compiladores\build\BUILDLexer.class
 br\ufscar\dc\compiladores\build\TabelaDeSimbolos$EntradaTabelaDeSimbolos.class
 br\ufscar\dc\compiladores\build\BUILDParser$CmdAjusteContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$NomeContext.class
-br\ufscar\dc\compiladores\build\BUILDParser$Lista_temperoContext.class
 br\ufscar\dc\compiladores\build\BUILDParser$Unidade_tempoContext.class

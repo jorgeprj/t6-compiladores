@@ -85,9 +85,9 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     //Visitante para os Componentes:
     @Override
     public Void visitComponentes(BUILDParser.ComponentesContext ctx) {
-        ctx.lista_pecas().forEach(ing -> visitLista_pecas(ing));
-        if (ctx.lista_tempero() != null) {
-            ctx.lista_tempero().forEach(temp -> visitLista_tempero(temp));
+        ctx.lista_pecas().forEach(pec -> visitLista_pecas(pec));
+        if (ctx.lista_ferramentas() != null) {
+            ctx.lista_ferramentas().forEach(fer -> visitLista_ferramentas(fer));
         }
         return null;
     }
@@ -113,9 +113,9 @@ public class BuildGeradorHTML extends BUILDBaseVisitor {
     }
 
     @Override
-    public Void visitLista_tempero(BUILDParser.Lista_temperoContext ctx) {
-        String nomeTemp = ctx.FERRAMENTA().getText();
-        tabela.adicionar(nomeTemp, TipoBUILD.FERRAMENTA);
+    public Void visitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx) {
+        String nomeFer = ctx.FERRAMENTA().getText();
+        tabela.adicionar(nomeFer, TipoBUILD.FERRAMENTA);
         saida.append("<li>");
         if (ctx.NUMERO() != null) {
             saida.append(ctx.NUMERO().getText());

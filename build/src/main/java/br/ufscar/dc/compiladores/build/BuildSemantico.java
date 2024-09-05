@@ -26,17 +26,17 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
         return super.visitLista_pecas(ctx);
     }
 
-    //Visitante da lista de temperos: Verifica se o tempero já está na tabela e o adiciona:
+    //Visitante da lista de ferramentas: Verifica se a ferramenta já está na tabela e o adiciona:
     @Override
-    public Void visitLista_tempero(BUILDParser.Lista_temperoContext ctx) {
-        String nomeTemp = ctx.FERRAMENTA().getText();
-        if (tabela.existe(nomeTemp)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.FERRAMENTA().getSymbol(), "Ferramenta " + nomeTemp + " já adicionado.");
+    public Void visitLista_ferramentas(BUILDParser.Lista_ferramentasContext ctx) {
+        String nomeFer = ctx.FERRAMENTA().getText();
+        if (tabela.existe(nomeFer)) {
+            SemanticoUtils.adicionarErroSemantico(ctx.FERRAMENTA().getSymbol(), "Ferramenta " + nomeFer + " já adicionado.");
         } else {
-            tabela.adicionar(nomeTemp, TipoBUILD.FERRAMENTA);
+            tabela.adicionar(nomeFer, TipoBUILD.FERRAMENTA);
         }
 
-        return super.visitLista_tempero(ctx);
+        return super.visitLista_ferramentas(ctx);
     }
 
     //Visitante do comando Aparafuse:

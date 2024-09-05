@@ -27,7 +27,7 @@ public class BUILDParser extends Parser {
 	public static final int
 		RULE_montagem = 0, RULE_imagem = 1, RULE_nome = 2, RULE_tempo_mont = 3, 
 		RULE_unidade_tempo = 4, RULE_paragrafo = 5, RULE_componentes = 6, RULE_lista_pecas = 7, 
-		RULE_medida_solido = 8, RULE_medida_liq = 9, RULE_lista_tempero = 10, 
+		RULE_medida_solido = 8, RULE_medida_liq = 9, RULE_lista_ferramentas = 10, 
 		RULE_tipo_colher = 11, RULE_passo = 12, RULE_cmd = 13, RULE_cmdAparafuse = 14, 
 		RULE_cmdAjuste = 15, RULE_cmdCole = 16, RULE_cmdTeste = 17, RULE_cmdEtapa = 18, 
 		RULE_cmdArmario = 19, RULE_cmdCama = 20, RULE_cmdMesa = 21, RULE_cmdCadeira = 22, 
@@ -35,7 +35,7 @@ public class BUILDParser extends Parser {
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"montagem", "imagem", "nome", "tempo_mont", "unidade_tempo", "paragrafo", 
-			"componentes", "lista_pecas", "medida_solido", "medida_liq", "lista_tempero", 
+			"componentes", "lista_pecas", "medida_solido", "medida_liq", "lista_ferramentas", 
 			"tipo_colher", "passo", "cmd", "cmdAparafuse", "cmdAjuste", "cmdCole", 
 			"cmdTeste", "cmdEtapa", "cmdArmario", "cmdCama", "cmdMesa", "cmdCadeira", 
 			"tipo_ajuste", "tempo"
@@ -474,11 +474,11 @@ public class BUILDParser extends Parser {
 		public Lista_pecasContext lista_pecas(int i) {
 			return getRuleContext(Lista_pecasContext.class,i);
 		}
-		public List<Lista_temperoContext> lista_tempero() {
-			return getRuleContexts(Lista_temperoContext.class);
+		public List<Lista_ferramentasContext> lista_ferramentas() {
+			return getRuleContexts(Lista_ferramentasContext.class);
 		}
-		public Lista_temperoContext lista_tempero(int i) {
-			return getRuleContext(Lista_temperoContext.class,i);
+		public Lista_ferramentasContext lista_ferramentas(int i) {
+			return getRuleContext(Lista_ferramentasContext.class,i);
 		}
 		public ComponentesContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -538,7 +538,7 @@ public class BUILDParser extends Parser {
 				{
 				{
 				setState(95);
-				lista_tempero();
+				lista_ferramentas();
 				}
 				}
 				setState(100);
@@ -750,7 +750,7 @@ public class BUILDParser extends Parser {
 		return _localctx;
 	}
 
-	public static class Lista_temperoContext extends ParserRuleContext {
+	public static class Lista_ferramentasContext extends ParserRuleContext {
 		public Token peso;
 		public Token pitada;
 		public Token a_gosto;
@@ -759,28 +759,28 @@ public class BUILDParser extends Parser {
 		public Tipo_colherContext tipo_colher() {
 			return getRuleContext(Tipo_colherContext.class,0);
 		}
-		public Lista_temperoContext(ParserRuleContext parent, int invokingState) {
+		public Lista_ferramentasContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_lista_tempero; }
+		@Override public int getRuleIndex() { return RULE_lista_ferramentas; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterLista_tempero(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).enterLista_ferramentas(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitLista_tempero(this);
+			if ( listener instanceof BUILDListener ) ((BUILDListener)listener).exitLista_ferramentas(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitLista_tempero(this);
+			if ( visitor instanceof BUILDVisitor ) return ((BUILDVisitor<? extends T>)visitor).visitLista_ferramentas(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final Lista_temperoContext lista_tempero() throws RecognitionException {
-		Lista_temperoContext _localctx = new Lista_temperoContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_lista_tempero);
+	public final Lista_ferramentasContext lista_ferramentas() throws RecognitionException {
+		Lista_ferramentasContext _localctx = new Lista_ferramentasContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_lista_ferramentas);
 		try {
 			setState(133);
 			_errHandler.sync(this);
@@ -796,7 +796,7 @@ public class BUILDParser extends Parser {
 				case T__13:
 					{
 					setState(121);
-					((Lista_temperoContext)_localctx).peso = match(T__13);
+					((Lista_ferramentasContext)_localctx).peso = match(T__13);
 					}
 					break;
 				case T__14:
@@ -826,7 +826,7 @@ public class BUILDParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(129);
-				((Lista_temperoContext)_localctx).pitada = match(T__19);
+				((Lista_ferramentasContext)_localctx).pitada = match(T__19);
 				setState(130);
 				match(FERRAMENTA);
 				}
@@ -837,7 +837,7 @@ public class BUILDParser extends Parser {
 				setState(131);
 				match(FERRAMENTA);
 				setState(132);
-				((Lista_temperoContext)_localctx).a_gosto = match(T__20);
+				((Lista_ferramentasContext)_localctx).a_gosto = match(T__20);
 				}
 				break;
 			default:
