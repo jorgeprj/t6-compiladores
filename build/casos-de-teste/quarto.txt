@@ -1,0 +1,32 @@
+montagem
+Nome:"Quarto"
+Imagem:"https://www.tuacasa.com.br/wp-content/uploads/2020/06/bancada-para-quarto.jpg"
+Tempo: 2 hora
+Paragrafo:"Este quarto foi recentemente montado com uma série de móveis que combinam funcionalidade e estilo, criando um ambiente aconchegante e organizado."
+
+Componentes:
+1 x BaseArmario
+2 x LateralArmario
+4 x Prateleiras
+2 x PortasArmario
+32 x Parafuso
+8 x PeDeCadeira
+4 x PeDeMesa
+1 x Tampo
+2 x Encosto
+2 x Assento
+1 x Cabeceira
+1 x Colchao
+1 x BaseCama
+4 x PeDeCama
+fim_componentes
+
+Passo:
+etapa("Prepare as ferramentas e peças")
+armario()
+cama()
+cadeira()
+cadeira()
+mesa()
+fim_passo
+fim_montagem

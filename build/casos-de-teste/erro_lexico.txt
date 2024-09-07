@@ -1,0 +1,27 @@
+montagem
+Nome:"Cadeira"
+Imagem:"https://images.tcdn.com.br/img/img_prod/824768/cadeira_mineira_almofada_91_1_871f520e5c964f2a902a2a7854fa2f30.jpg"
+Tempo: 35 min
+Paragrafo:"Esta cadeira moderna combina conforto e estilo, tornando-a ideal para uso em diversos ambientes, como salas de jantar, escritórios, e áreas de convivência. Com um design ergonômico, oferece um assento acolchoado que proporciona suporte adequado para a coluna, garantindo conforto durante longos períodos de uso."
+
+Componentes:
+4 x Parafuso
+4 x PeDeCadeira
+1 x Encosto
+1 x Assento
+fim_componentes
+
+Passo:
+etapa("Prepare as ferramentas e peças")
+cole(PeDeCadeira, Assento)
+$Erro sintático (deveria ser ajuste):
+col(PeDeCadeira, Assento)
+cole(PeDeCadeira, Assento)
+cole(PeDeCadeira, Assento)
+$Erro sintático (deveria ser ajuste):
+ajust(Encosto, perpendicular)
+aparafuse(Encosto)
+teste(5 min)
+etapa("Cuidado: Não exceda o peso máximo recomendado de 120 kg.")
+fim_passo
+fim_montagem

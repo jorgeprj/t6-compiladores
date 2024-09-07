@@ -5,7 +5,8 @@ Tempo: 35 min
 Paragrafo:"Esta cadeira moderna combina conforto e estilo, tornando-a ideal para uso em diversos ambientes, como salas de jantar, escritórios, e áreas de convivência. Com um design ergonômico, oferece um assento acolchoado que proporciona suporte adequado para a coluna, garantindo conforto durante longos períodos de uso."
 
 Componentes:
-54 x Parafuso
+1 x Cola
+4 x Parafuso
 4 x PeDeCadeira
 1 x Encosto
 1 x Assento
@@ -13,11 +14,13 @@ fim_componentes
 
 Passo:
 etapa("Prepare as ferramentas e peças")
-aparafuse(Assento)
-ajuste(Encosto, paralela)
 cole(PeDeCadeira, Assento)
+cole(PeDeCadeira, Assento)
+cole(PeDeCadeira, Assento)
+cole(PeDeCadeira, Assento)
+ajuste(Encosto, perpendicular)
+aparafuse(Encosto)
 teste(5 min)
-armario()
-mesa()
+etapa("Cuidado: Não exceda o peso máximo recomendado de 120 kg.")
 fim_passo
 fim_montagem
