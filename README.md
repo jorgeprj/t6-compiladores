@@ -14,7 +14,7 @@
 ## Descrição
 BUILD é uma linguagem declarativa projetada para descrever manuais de instruções de montagem de produtos, como móveis e outros itens. A linguagem permite que os usuários escrevam as etapas de montagem de maneira estruturada e clara. O compilador da BUILD gera uma página HTML que pode ser utilizada como manual de instruções, completa com texto, imagens e descrições detalhadas.
 
-- **Vídeo demonstrativo:** *Em breve*
+- **Vídeo demonstrativo:** [*Assista agora*](https://youtu.be/yZWQsxYmqrI)
 
 ## Estrutura da Linguagem
 A linguagem BUILD é composta por blocos e comandos que descrevem uma montagem, incluindo as seguintes seções principais:
