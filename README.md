@@ -3,9 +3,13 @@
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
 **Autores**: Jorge Pires e Giullio Gerolamo
-**Disciplina**: Construção de Compiladores  
+
+**Disciplina**: Construção de Compiladores
+
 **Professor**: Daniel Lucrédio  
+
 **Última revisão**: Setembro/2024  
+
 
 ## Descrição
 BUILD é uma linguagem declarativa projetada para descrever manuais de instruções de montagem de produtos, como móveis e outros itens. A linguagem permite que os usuários escrevam as etapas de montagem de maneira estruturada e clara. O compilador da BUILD gera uma página HTML que pode ser utilizada como manual de instruções, completa com texto, imagens e descrições detalhadas.
