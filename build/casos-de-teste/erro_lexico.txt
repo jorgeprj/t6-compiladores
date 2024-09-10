@@ -14,10 +14,12 @@ fim_componentes
 Passo:
 etapa("Prepare as ferramentas e peças")
 cole(PeDeCadeira, Assento)
-$Erro sintático (deveria ser ajuste):
+
+$Erro sintático (deveria ser cole):
 col(PeDeCadeira, Assento)
 cole(PeDeCadeira, Assento)
 cole(PeDeCadeira, Assento)
+
 $Erro sintático (deveria ser ajuste):
 ajust(Encosto, perpendicular)
 aparafuse(Encosto)
