@@ -17,11 +17,11 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante da lista de pecas: Verifica se a peca já está na tabela e o adiciona:
     @Override
     public Void visitLista_pecas(BUILDParser.Lista_pecasContext ctx) {
-        String nomePec = ctx.PECA().getText();
-        if (tabela.existe(nomePec)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça " + nomePec + " já adicionado.");
+        String pec = ctx.PECA().getText();
+        if (tabela.existe(pec)) {
+            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça " + pec + " já adicionada.");
         } else {
-            tabela.adicionar(nomePec, TipoBUILD.PECA);
+            tabela.adicionar(pec, TipoBUILD.PECA);
         }
         return super.visitLista_pecas(ctx);
     }
@@ -34,12 +34,12 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
 
         // Verifica se a peça específico está declarado
         if (!tabela.existe(pec)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça " + pec + " não declarado.");
+            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça " + pec + " não declarada.");
         }
 
         // Verifica se a peça "Parafuso" está declarada
         if (!tabela.existe("Parafuso")) {
-            SemanticoUtils.adicionarErroSemantico(ctx.getStart(), "Parafuso não declarado.");
+            SemanticoUtils.adicionarErroSemantico(ctx.getStart(), "Parafuso não declarada.");
         }
 
         return super.visitCmdAparafuse(ctx);
@@ -49,9 +49,9 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Ajuste:
     @Override
     public Void visitCmdAjuste(BUILDParser.CmdAjusteContext ctx) {
-        String Pec = ctx.PECA().getText();
-        if (!tabela.existe(Pec)) {
-            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça" + Pec + " não declarado.");
+        String pec = ctx.PECA().getText();
+        if (!tabela.existe(pec)) {
+            SemanticoUtils.adicionarErroSemantico(ctx.PECA().getSymbol(), "Peça " + pec + " não declarada.");
         }
         return super.visitCmdAjuste(ctx);
     }
@@ -59,9 +59,9 @@ public class BuildSemantico extends BUILDBaseVisitor<Void> {
     //Visitante do comando Cole:
     @Override
     public Void visitCmdCole(BUILDParser.CmdColeContext ctx) {
-        // Verifica se "Cola" está declarado
+        // Verifica se "Cola" está declarada
         if (!tabela.existe("Cola")) {
-            // Adiciona um erro semântico se "Cola" não estiver declarado
+            // Adiciona um erro semântico se "Cola" não estiver declarada
             SemanticoUtils.adicionarErroSemantico(ctx.getStart(), "Cola não declarada.");
             tabela.adicionar("Cola", TipoBUILD.PECA);
         }

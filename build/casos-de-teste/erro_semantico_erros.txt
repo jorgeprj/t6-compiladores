@@ -1,0 +1,5 @@
+Erro 10:4 - Peça PeDeCadeira já adicionada.
+Erro 17:0 - Cola não declarada.
+Erro 25:7 - Peça Encosto não declarada.
+Erro 28:10 - Peça Encosto não declarada.
+Erro 28:0 - Parafuso não declarada.
