@@ -62,6 +62,7 @@ O compilador da linguagem BUILD realiza quatro verificações semânticas import
 - **Comandos**: A linguagem BUILD suporta comandos como `aparafuse`, `cole`, `ajuste`, entre outros, para descrever as etapas detalhadas da montagem.
 - **Verificações Semânticas**: As verificações garantem que as instruções de montagem sejam consistentes, usando apenas os componentes declarados corretamente.
 - **Geração de Página HTML**: O compilador da BUILD gera uma página HTML que serve como manual de instruções visual, contendo os componentes, passos e imagens da montagem.
+- **(*NOVIDADE*)** **Geração de Arquivo TXT com os erros**: O compilador da BUILD gera um arquivo TXT que serve como registro dos erros identificados. 
 
 ## Como Executar
 
